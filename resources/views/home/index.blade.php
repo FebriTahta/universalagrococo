@@ -1,5 +1,33 @@
 @extends('layouts.master')
+@section('head')
+    
+    <style>
+        *{padding:0;margin:0;}
 
+        /* body{
+            font-family:Verdana, Geneva, sans-serif;
+            font-size:18px;
+            background-color:#CCC;
+        } */
+
+        .float{
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:80px;
+            right:10px;
+            background-color:#0C9;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+            box-shadow: 2px 2px 3px #999;
+        }
+
+        .my-float{
+            margin-top:22px;
+        }
+    </style>
+@endsection
 @section('content')
 <div id="carousel-home">
     <div class="owl-carousel owl-theme">			
@@ -138,4 +166,8 @@
        <!--/call_section-->
 </div>
 <!-- /pattern_2 -->
+
+<a href="{{$data_contact->whatsapp}}" target="_blank" class="float">
+    <i class="fa fa-whatsapp"  style="margin-top: 5px; font-size: 50px"></i>
+</a>
 @endsection

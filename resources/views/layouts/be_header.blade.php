@@ -285,7 +285,7 @@
 								<div class="menu-title">Profile</div>
 							</a>
 							<ul>
-								<li> <a href="#" target="_blank"><i class="bx bx-right-arrow-alt"></i>Account</a>
+								<li> <a href="{{route('be_account.page')}}"><i class="bx bx-right-arrow-alt"></i>Account</a>
 								</li>
 								<li> <a href="{{route('be_contact.page')}}"><i class="bx bx-right-arrow-alt"></i>Contact</a>
 								</li>

@@ -10,6 +10,7 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ImageheaderController;
 use App\Http\Controllers\KomentarController;
 use App\Http\Controllers\ImagemenuController;
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ClientController;
 use App\Http\Middleware\CheckRole;
 use Illuminate\Support\Facades\Route;
@@ -97,6 +98,9 @@ Route::post('/be-product-comment-dell',[KomentarController::class,'be_product_co
 Route::get('/be-client',[ClientController::class,'be_client_page'])->name('be_client.page');
 Route::get('/be-client-data',[ClientController::class,'be_client_data'])->name('be_client.data');
 Route::post('/be-client-dell',[ClientController::class,'be_client_dell'])->name('be_client.dell');
-
-
+//
+Route::get('/be-account',[AccountController::class,'be_account_page'])->name('be_account.page');
+Route::get('/be-account-data',[AccountController::class,'be_account_data'])->name('be_account.data');
+Route::post('/be-account-store',[AccountController::class,'be_account_store'])->name('be_account.store');
+Route::post('/be-account-dell',[AccountController::class,'be_account_dell'])->name('be_account.dell');
 });
