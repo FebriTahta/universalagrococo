@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\About;
 use App\Models\Profile;
-use App\Models\SpecialOffer;
+use App\Models\Specialoffer;
 use App\Models\Slider;
 use App\Models\Ajakan;
 use App\Models\Imagemenu;
@@ -18,7 +18,7 @@ class LandingController extends Controller
         $data_product   = Product::limit(4)->get();
         $data_about     = About::where('id',1)->first();
         $data_contact   = Profile::where('id',1)->first();
-        $data_special   = SpecialOffer::where('id',1)->first();
+        $data_special   = Specialoffer::where('id',1)->first();
         $data_invitation= Ajakan::where('id',1)->first();
         $menu_product   = Imagemenu::where('id',1)->first();
         $menu_contact   = Imagemenu::where('id',2)->first();
