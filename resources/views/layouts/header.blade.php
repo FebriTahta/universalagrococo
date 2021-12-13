@@ -45,7 +45,7 @@
 		<div class="layer"></div><!-- Opacity Mask Menu Mobile -->
 		<div class="container-fluid">
 		<div id="logo">
-			<a href="index.html">
+			<a href="/">
 				<img src="{{asset('be_contact_logo/'.$data_contact->img_light)}}" width="140" height="35" alt="" class="logo_normal">
 				<img src="{{asset('be_contact_logo/'.$data_contact->img_dark)}}" width="140" height="35" alt="" class="logo_sticky">
 			</a>
@@ -91,7 +91,7 @@
 		        <a href="#0" class="open_close">
 		            <i class="icon_close"></i><span>Menu</span>
 		        </a>
-		        <a href="index.html"><img src="{{asset('be_contact_logo/'.$data_contact->img_light)}}" width="140" height="35" alt=""></a>
+		        <a href="/"><img src="{{asset('be_contact_logo/'.$data_contact->img_light)}}" width="140" height="35" alt=""></a>
 		    </div>
 		    <ul>
 		        <li class="submenu">
