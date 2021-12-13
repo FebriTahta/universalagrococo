@@ -46,8 +46,8 @@ class ServiceController extends Controller
     public function be_service_store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name'     => 'nullable|max:20',
-            'deskripsi' => 'nullable|max:150',
+            'name'     => 'nullable|max:50',
+            'deskripsi' => 'nullable|max:500',
             'img'       => 'mimes:jpeg,jpg,png,gif',
         ]);
 
