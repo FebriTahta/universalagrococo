@@ -3,6 +3,60 @@
 </div>
 
 <hr class="mt-0 mb-0">	
+<!-- FEATURES 7 -->
+<div class="page-section grey-light-bg clearfix">
+  <div class="fes7-img-cont col-md-5">
+    <div class="fes7-img" style="background-image: url({{asset('assets/images/fes7.jpg')}})" ></div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-6 fes7-text-cont p-80-cont">
+        <h1><span class="font-light">ABOUT US</span></h1>
+        <p class="mb-60">
+          Kami (UAC Indonesia) adalah perusahaan manufaktur Indonesia yang bergerak di bidang perkebunan dan memasok bahan baku dari kelapa segar hingga produk olahan kelapa yang memiliki nilai dan manfaat tertinggi bagi konsumen kami. Perusahaan kami sangat ahli dalam industri turunan kelapa, kami memiliki pengalaman terbaik, membuat klien kami puas dengan setiap kerjasama sebagai sebuah proyek.
+
+        </p>
+      </div>
+    </div><!--end of row-->
+  </div>
+</div>  
+
+
+<!-- DIVIDER -->
+<hr class="mt-0 mb-0">	
+
+<!-- CLIENTS 1 & TESTIMONIALS 1 -->
+<div class="page-section p-110-cont">
+    <div class="container">
+<div class="row">
+
+<div class="col-md-12">
+<div class="mb-50">
+                  <h2 class="section-title">VISION <span class="bold">MISSION</span></h2>
+                </div>
+            </div>
+
+        </div>
+<div class="row">
+<!-- CLIENTS 1 -->
+<div class="col-md-6">
+  <blockquote class="quote mb-0 m-p-0">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.</p>
+    <footer>Our Vision.</footer>
+   </blockquote>
+  </div>
+<!-- TESTIMONIALS 1 -->
+<div class="col-md-6">
+<blockquote class="quote mb-0 m-p-0">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.</p>
+  <footer>Our Mission.</footer>
+ </blockquote>
+</div>
+
+        </div>
+    </div>
+</div>    
 
 <!-- FEATURES 4 -->
 <div class="page-section fes4-cont">
@@ -83,61 +137,7 @@
     </div>
 </div>
 
-{{-- ABOUT --}}
-<!-- FEATURES 7 -->
-<div class="page-section grey-light-bg clearfix">
-    <div class="fes7-img-cont col-md-5">
-      <div class="fes7-img" style="background-image: url({{asset('assets/images/fes7.jpg')}})" ></div>
-    </div>
-    
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-6 fes7-text-cont p-80-cont">
-          <h1><span class="font-light">ABOUT US</span></h1>
-          <p class="mb-60">
-            Kami (UAC Indonesia) adalah perusahaan manufaktur Indonesia yang bergerak di bidang perkebunan dan memasok bahan baku dari kelapa segar hingga produk olahan kelapa yang memiliki nilai dan manfaat tertinggi bagi konsumen kami. Perusahaan kami sangat ahli dalam industri turunan kelapa, kami memiliki pengalaman terbaik, membuat klien kami puas dengan setiap kerjasama sebagai sebuah proyek.
-
-          </p>
-        </div>
-      </div><!--end of row-->
-    </div>
-  </div>  
-
-
-<!-- DIVIDER -->
-<hr class="mt-0 mb-0">	
-
-<!-- CLIENTS 1 & TESTIMONIALS 1 -->
-<div class="page-section p-110-cont">
-    <div class="container">
-<div class="row">
-
-<div class="col-md-12">
-<div class="mb-50">
-                  <h2 class="section-title">VISION <span class="bold">MISSION</span></h2>
-                </div>
-            </div>
-
-        </div>
-<div class="row">
-<!-- CLIENTS 1 -->
-<div class="col-md-6">
-  <blockquote class="quote mb-0 m-p-0">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.</p>
-    <footer>Our Vision.</footer>
-   </blockquote>
-  </div>
-<!-- TESTIMONIALS 1 -->
-<div class="col-md-6">
-<blockquote class="quote mb-0 m-p-0">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.</p>
-  <footer>Our Mission.</footer>
- </blockquote>
-</div>
-
-        </div>
-    </div>
-</div>        
+{{-- ABOUT --}}    
 
 <hr class="mt-0 mb-0">	
 
