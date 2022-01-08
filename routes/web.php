@@ -104,3 +104,6 @@ Route::get('/be-account-data',[AccountController::class,'be_account_data'])->nam
 Route::post('/be-account-store',[AccountController::class,'be_account_store'])->name('be_account.store');
 Route::post('/be-account-dell',[AccountController::class,'be_account_dell'])->name('be_account.dell');
 });
+
+
+//  new front end
