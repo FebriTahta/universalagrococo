@@ -4,16 +4,16 @@
               
       <!-- Social Links -->
       <div class="footer-soc-a">
-        <a href="https://1.envato.market/a1gQR" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-        <a href="https://1.envato.market/a1gQR" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a href="https://1.envato.market/a1gQR" title="Behance" target="_blank"><i class="fa fa-behance"></i></a>
-        <a href="https://1.envato.market/a1gQR" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
-        <a href="https://dribbble.com/abcgomel" title="Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a>
+        <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="#" title="Behance" target="_blank"><i class="fa fa-behance"></i></a>
+        <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="#" title="Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a>
       </div>
 
       <!-- Copyright -->
       <div class="footer-copy">
-        <a href="http://themeforest.net/user/abcgomel/portfolio" target="_blank">&copy; HASWELL 2020</a>
+        <a href="#" target="_blank">&copy; Universal Agro Coco 2021</a>
       </div>
               
     </div>

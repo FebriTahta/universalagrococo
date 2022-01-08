@@ -114,7 +114,7 @@
 						<!-- LOGO --> 
 						<div class="logo-container-2">
                 <div class="logo-2">
-                  <a href="index.html" class="clearfix">
+                  <a href="#" class="clearfix">
                     {{-- <img src="{{asset('assets/images/logo-white.png')}}" class="logo-img" alt="Logo"> --}}
                     <img src="{{asset('assets/images/logo-white.png')}}" class="logo-img" alt="Logo">
                   </a>
