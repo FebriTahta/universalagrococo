@@ -1,6 +1,8 @@
+{{-- @include('layouts.new.header')
+@yield('containers')
+@include('layouts.new.footer') --}}
 @include('layouts.new.header')
-@include('layouts.new.slider')
-@include('layouts.new.content')
 
-{{-- @yield('content') --}}
+@yield('containers')
+
 @include('layouts.new.footer')

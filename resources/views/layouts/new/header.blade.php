@@ -140,24 +140,24 @@
 
 									<!-- MAIN MENU LIST -->
 									<nav class="collapse collapsing navbar-collapse right-1024">
-									  <ul class="nav navbar-nav">
+									  <ul class="nav navbar-nav" id="nav-sidebar">
                       
                       <!-- MENU ITEM -->
-                      <li class="parent current">
-                        <a href="#"><div class="main-menu-title">HOME</div></a>
+                      <li class="parent {{ Request::routeIs('landing') ? 'current' : '' }}">
+                        <a href="/"><div class="main-menu-title">HOME</div></a>
                       </li>
 
                       <!-- MENU ITEM -->
-                      <li class="parent">
-                        <a href="#"><div class="main-menu-title">PRODUCT</div></a>
+                      <li class="parent {{ Request::routeIs('all.product') ? 'current' : '' }}">
+                        <a href="{{route('all.product')}}"><div class="main-menu-title">PRODUCT</div></a>
                       </li>
 
                       <li class="parent">
-                        <a href="#"><div class="main-menu-title">CONTACT</div></a>
+                        <a href="#contact"><div class="main-menu-title">CONTACT</div></a>
                       </li>
 
                       <li class="parent">
-                        <a href="#"><div class="main-menu-title">ABOUT US</div></a>
+                        <a href="#about"><div class="main-menu-title">ABOUT US</div></a>
                       </li>
 					
 					
@@ -165,3 +165,4 @@
 				  <!-- END header-wrapper -->
 				  
 				</header>
+				

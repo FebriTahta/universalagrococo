@@ -17,8 +17,9 @@ class ProductController extends Controller
     {
         $header_product = Imageheader::where('id',2)->first();
         $data_contact   = Profile::where('id',1)->first();
-        $data_product   = Product::paginate(5);
-        return view('product.list',compact('data_contact','data_product','header_product'));
+        $data_product   = Product::all();
+        // return view('product.list',compact('data_contact','data_product','header_product'));
+        return view('new.product',compact('data_contact','data_product','header_product'));
     }
 
     public function detail($slug_product)

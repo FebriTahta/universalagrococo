@@ -37,7 +37,7 @@
 
   <!-- MAGNIFIC POPUP -->
   <script src='{{asset('assets/js/jquery.magnific-popup.min.js')}}'></script>
-
+  
 <!-- PORTFOLIO SCRIPTS -->
 <script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
 <script src="{{asset('assets/js/imagesloaded.pkgd.min.js')}}"></script>
@@ -61,7 +61,7 @@
 
 <!-- OWL CAROUSEL -->    
 <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
-
+<script src="{{asset('assets/js/jquery.nav.js')}}"></script>
 <!-- MAIN SCRIPT -->
   <script src="{{asset('assets/js/main.js')}}"></script>
   
@@ -232,7 +232,43 @@
           });	//ready
           
       </script>
+<script>
+  $(document).ready(function() {
+  
+  //NAV SIDEBAR------------------------------------------------------------------
+    var top_offset = $('header').height() - 1;  // get height of fixed navbar
 
+    $('#nav-sidebar').onePageNav({
+      currentClass: 'current',
+      changeHash: false,
+      scrollSpeed: 700,
+      scrollOffset: top_offset,
+      scrollThreshold: 0.5,
+      filter: '',
+      easing: 'swing',
+      begin: function() {
+        //I get fired when the animation is starting
+      },
+      end: function() {
+        //I get fired when the animation is ending
+      },
+      scrollChange: function($currentListItem) {
+        //I get fired when you enter a section and I pass the list item of the section
+      }
+    });
+
+  //SIDEBAR STICKY---------------------------------------------	  
+    var //offsetSb = $('.page-title-bg').height(),
+      offsetFooter = $('#footer-offset').height()+30;
+      // DM Menu
+    jQuery('#sidebar-stiky').affix({
+      offset: { top: 300, //top offset for header 1 for others headers it will have other value
+        bottom: offsetFooter		
+      }
+    });
+    
+  }); 
+</script>
 <!-- JS end -->	
 
 </body>
