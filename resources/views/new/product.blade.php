@@ -153,11 +153,11 @@
                                           </li>
                     
                                           <li class="parent">
-                                            <a href="#"><div class="main-menu-title">CONTACT</div></a>
+                                            <a href="/"><div class="main-menu-title">CONTACT</div></a>
                                           </li>
                     
                                           <li class="parent">
-                                            <a href="#"><div class="main-menu-title">ABOUT US</div></a>
+                                            <a href="/"><div class="main-menu-title">ABOUT US</div></a>
                                           </li>
                     
 									  </ul>
