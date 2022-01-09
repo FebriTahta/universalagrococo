@@ -440,7 +440,7 @@
 <div class="container">
 
 <div class="mb-50">
-<h2 class="section-title pr-0">OUR <span class="bold">PRODUCTS</span><a href="blog-right-sidebar.html" class="section-more right">SEE MORE PRODUCT</a>
+<h2 class="section-title pr-0">OUR <span class="bold">PRODUCTS</span><a href="{{route('all.product')}}" class="section-more right">SEE MORE PRODUCT</a>
   </h2>
 </div>
 

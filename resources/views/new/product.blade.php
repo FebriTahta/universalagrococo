@@ -204,10 +204,9 @@
         <!-- MAIN CONTENT -->
         
         <div class="p-140-cont">
-          
           <!-- DIVIDER -->
           @foreach ($data_product as $item)
-          <hr id="branding-section" class="mt-0 mb-80">
+          <hr id="{{$item->slug}}" class="mt-0 mb-80">
           
           <!-- CONTAINER -->
           <div class="container"> 
@@ -231,13 +230,53 @@
                       <div class="port-img-overlay">
                         <img class="port-main-img" src="{{asset('assets/images/portfolio/projects-3.jpg')}}" alt="img">
                       </div>
-                      <div class="port-overlay-cont">
+                      {{-- <div class="port-overlay-cont">
                         <div class="port-btn-cont">
-                          <div aria-hidden="true" class="icon_link"></div>
+                          <div aria-hidden="true" class="icon_search"></div>
+                          <span class="popup-multi-gallery">
+                            <a href="{{asset('assets/images/blog/post-wide-3.jpg')}}"></a>
+                            <a href="{{asset('assets/images/blog/post-wide-4.jpg')}}"></a>
+                            <a href="{{asset('assets/images/blog/post-wide-5.jpg')}}"></a>
+                        </div> --}}
+                        <div class="port-overlay-cont">
+
+                            <div class="port-title-cont">
+                              <h3><a href="#" style="text-transform: uppercase">{{$item->name}}</a></h3>
+                              <span><a href="#">Product</a></span>
+                            </div>
+                            <div class="port-btn-cont">
+                                <span class="popup-multi-gallery">
+                                    <a href="{{asset('assets/images/portfolio/projects-3.jpg')}}" class="lightbox-item mr-20"><div aria-hidden="true" class="icon_search"></div></a>
+                                </span>
+                            </div>
+        
                         </div>
                       </div>
                     </a>  
                   </div>
+
+                  {{-- <li role="button" class="port-item mix development" style="position: absolute; left: 0px; top: 0px;">
+                    <a href="portfolio-single1.html">
+                      <div class="port-img-overlay"><img class="port-main-img" src="{{asset('assets/images/portfolio/projects-5.jpg')}}" alt="img"></div>
+                    </a>
+                    <div class="port-overlay-cont">
+    
+                        <div class="port-title-cont">
+                          <h3><a href="portfolio-single1.html">MINIMALISM BOOKS</a></h3>
+                          <span><a href="#">ui elements</a><span class="slash-divider">/</span><a href="#">media</a></span>
+                        </div>
+                        <div class="port-btn-cont">
+                                                <span class="popup-multi-gallery">
+                                                    <a href="{{asset('assets/images/portfolio/projects-5.jpg')}}" class="lightbox-item mr-20"><div aria-hidden="true" class="icon_search"></div></a>
+                              <a href="{{asset('assets/images/blog/post-wide-3.jpg')}}"></a>
+                              <a href="{{asset('assets/images/blog/post-wide-4.jpg')}}"></a>
+                              <a href="{{asset('assets/images/blog/post-wide-5.jpg')}}"></a>
+                                                </span>
+                                                <a href="portfolio-single1.html"><div aria-hidden="true" class="icon_link"></div></a>
+                        </div>
+    
+                    </div>
+                  </li> --}}
 
                 </div>
               </div>
@@ -312,28 +351,13 @@
               <div class="col-md-3 col-sm-3 widget">
                 <h4>RECENT POSTS</h4>
                 <div id="post-list-footer">
-
-                  <div class="post-prev-title">
-                    <h3><a class="a-text"  href="##">New trends in web design</a></h3>
-                  </div>
-                  <div class="post-prev-info">
-                    Jule 10
-                  </div>
-                   
-                  <div class="post-prev-title">
-                    <h3><a class="a-text"  href="##">The sound of life</a></h3>
-                  </div>
-                  <div class="post-prev-info">
-                    October 10
-                  </div>
-                   
-                  <div class="post-prev-title">
-                    <h3><a class="a-text"  href="##">Time for minimalism</a></h3>
-                  </div>
-                  <div class="post-prev-info">
-                     September 21
-                  </div>
-
+                    <ul class="nav navbar-nav" id="nav-sidebar">
+                    @foreach ($data_product as $item)
+                        <div class="post-prev-title">
+                            <h3><a class="a-text"  href="#{{$item->slug}}">{{$item->name}}</a></h3>
+                        </div>
+                    @endforeach
+                    </ul>
                 </div>                  
               </div>
             </div>    
@@ -409,8 +433,45 @@
             <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
             <script src="{{asset('assets/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>   
             <script src="{{asset('assets/rs-plugin/js/jquery.themepunch.revolution-parallax.min.js')}}"></script>
-    
+            <script src="{{asset('assets/js/jquery.nav.js')}}"></script>
 <!-- JS end -->	
+<script>
+    $(document).ready(function() {
+    
+    //NAV SIDEBAR------------------------------------------------------------------
+      var top_offset = $('header').height() - 1;  // get height of fixed navbar
+  
+      $('#nav-sidebar').onePageNav({
+        currentClass: 'current',
+        changeHash: false,
+        scrollSpeed: 700,
+        scrollOffset: top_offset,
+        scrollThreshold: 0.5,
+        filter: '',
+        easing: 'swing',
+        begin: function() {
+          //I get fired when the animation is starting
+        },
+        end: function() {
+          //I get fired when the animation is ending
+        },
+        scrollChange: function($currentListItem) {
+          //I get fired when you enter a section and I pass the list item of the section
+        }
+      });
+  
+    //SIDEBAR STICKY---------------------------------------------	  
+      var //offsetSb = $('.page-title-bg').height(),
+        offsetFooter = $('#footer-offset').height()+30;
+        // DM Menu
+      jQuery('#sidebar-stiky').affix({
+        offset: { top: 300, //top offset for header 1 for others headers it will have other value
+          bottom: offsetFooter		
+        }
+      });
+      
+    }); 
+  </script>
 	
 	</body>
 </html>		

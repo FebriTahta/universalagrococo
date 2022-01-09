@@ -159,7 +159,7 @@
                       <li class="parent">
                         <a href="#about"><div class="main-menu-title">ABOUT US</div></a>
                       </li>
-					
+									  </ul>
 					
 				  </div>
 				  <!-- END header-wrapper -->
