@@ -16,7 +16,7 @@ class LandingController extends Controller
     public function index()
     {
         $data_slider    = Slider::all();
-        $data_product   = Product::limit(4)->get();
+        $data_product   = Product::orderBy('id', 'desc')->get();
         $data_about     = About::where('id',1)->first();
         $data_contact   = Profile::where('id',1)->first();
         $data_special   = Specialoffer::where('id',1)->first();

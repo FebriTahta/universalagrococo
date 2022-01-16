@@ -70,7 +70,10 @@
       <script src="{{asset('assets/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>   
       <script src="{{asset('assets/rs-plugin/js/jquery.themepunch.revolution-parallax.min.js')}}"></script>
 
-<!-- SLIDER REVOLUTION INIT  -->
+      <!-- FLEX SLIDER SCRIPTS  -->
+		<script src="{{asset('assets/js/jquery.flexslider-min.js')}}"></script> 
+		<script src="{{asset('assets/js/flex-slider.js')}}"></script> 
+
       <script>
 
           jQuery(document).ready(function() {
@@ -270,6 +273,6 @@
   }); 
 </script>
 <!-- JS end -->	
-
+@yield('new_script')
 </body>
 </html>		

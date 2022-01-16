@@ -439,15 +439,46 @@
 <div class="page-section pt-110-b-30-cont">
 <div class="container">
 
-<div class="mb-50">
-<h2 class="section-title pr-0">OUR <span class="bold">PRODUCTS</span><a href="{{route('all.product')}}" class="section-more right">SEE MORE PRODUCT</a>
-  </h2>
-</div>
+
+{{-- <h2 class="section-title pr-0">OUR <span class="bold">PRODUCTS</span><a href="{{route('all.product')}}" class="section-more right">SEE MORE PRODUCT</a>
+</h2> --}}
+
 
 <div class="row">
-
+<!-- FLEX SLIDER -->
+<div class="indent-header">
+  <div class="slider-1 clearfix">
+   
+    <div class="flex-container">
+        <div class="flexslider loading">
+            <ul class="slides">
+            @foreach ($data_product as $item)
+              <!-- SLIDE 1 -->
+                <li>
+                    <div class="container" style="text-decoration-color: black">
+                        <div class="sixteen columns contain">
+                            <h2  class="section-title pr-0">OUR <span class="bold">PRODUCTS</span>
+                            </h2>
+                            <h2 data-toptitle="10%" class="norm-50-wide norm-40-768-959 font-dark top-28-767 flex-top-bot" style="margin-left: 30px; text-transform: uppercase">
+                              {{$item->name}}
+                            </h2>
+                            <p data-bottomtext="60%" class="bot-15-767 flex-bot-top " style="margin-left: 25px">
+                                <a class="button medium thin hover-dark tp-button dark" href="#0">CONTACT US</a>
+                                <a class="button medium thin hover-dark tp-button dark ml-20" href="/all-product">SEE DETAILS</a>
+                            </p>
+                            <img src="{{asset('be_product/'.$item->img)}}" class="item" alt="slide-item"  data-topimage="0"/>
+                        </div>
+                    </div><!-- End Container -->
+                </li><!-- End item -->
+                @endforeach
+            </ul>
+        </div>
+    </div>
+     
+  </div><!-- End slider -->			
+</div>
 <!-- Post Item 1 -->
-<div class="col-sm-6 col-md-4 col-lg-4 wow fadeIn pb-70" >
+{{-- <div class="col-sm-6 col-md-4 col-lg-4 wow fadeIn pb-70" >
   
 <div class="post-prev-img">
   <a href="#"><img src="{{asset('assets/images/blog/post-prev-1.jpg')}}" alt="img"></a>
@@ -564,7 +595,7 @@
   </div>
 </div>
 
-</div>
+</div> --}}
 
 </div>
 

@@ -29,6 +29,8 @@
 <!-- CSS -->
     <!-- REVOSLIDER CSS SETTINGS -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/rs-plugin/css/settings.min.css')}}" media="screen">
+	<!-- FLEXSLIDER SLIDER CSS -->
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/flexslider.css')}}"  >
 
     <!--  BOOTSTRAP -->
 		<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}"> 
@@ -64,6 +66,7 @@
 		
     <!-- Modernizr -->
     <!-- <script src="js/modernizr.js"></script> -->
+		@yield('new_head')
 		
 	</head>
 	<body>
