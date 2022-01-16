@@ -246,7 +246,7 @@
                             </div>
                             <div class="port-btn-cont">
                                 <span class="popup-multi-gallery">
-                                    <a href="{{asset('assets/images/portfolio/projects-3.jpg')}}" class="lightbox-item mr-20"><div aria-hidden="true" class="icon_search"></div></a>
+                                    <a href="{{asset('be_product/'.$item->img)}}" class="lightbox-item mr-20"><div aria-hidden="true" class="icon_search"></div></a>
                                 </span>
                             </div>
         
