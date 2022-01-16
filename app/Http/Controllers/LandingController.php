@@ -25,7 +25,7 @@ class LandingController extends Controller
         $menu_product   = Imagemenu::where('id',1)->first();
         $menu_contact   = Imagemenu::where('id',2)->first();
         $menu_profile   = Imagemenu::where('id',3)->first();
-        $service        = Service::limit(3)->get();
+        $service        = Service::limit(4)->get();
         $social        = Imageheader::all();
         // return view('home.index',compact('data_slider','data_product','data_about','data_contact'
         // ,'data_special','data_invitation','menu_product','menu_contact','menu_profile'));

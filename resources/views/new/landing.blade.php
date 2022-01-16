@@ -120,7 +120,7 @@
 <!-- FEATURES 7 -->
 <div class="page-section grey-light-bg clearfix">
   <div class="fes7-img-cont col-md-5">
-    <div class="fes7-img" style="background-image: url({{asset('assets/images/fes7.jpg')}})" ></div>
+    <div class="fes7-img" style="background-image: url({{asset('be_img_about/'.$data_about->img)}})" ></div>
   </div>
   
   <div class="container">
@@ -152,7 +152,7 @@
         
       <div class="row">
         @foreach ($service as $item)
-        <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="col-xs-12 col-sm-3 col-md-3">
           <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
             <div class="fes4-title-cont" >
                 {{-- <div class="fes4-box-icon">
