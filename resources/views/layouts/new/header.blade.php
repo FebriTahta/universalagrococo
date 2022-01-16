@@ -120,7 +120,7 @@
                   <a href="#" class="clearfix">
                     {{-- <img src="{{asset('assets/images/logo-white.png')}}" class="logo-img" alt="Logo"> --}}
 					<?php $p = App\Models\Profile::where('id',1)->first()?>
-                    <img src="{{asset('be_contact_logo/'.$p->img_light)}}" class="logo-img" alt="Logo">
+                    <img src="{{asset('be_contact_logo/'.$p->img_light)}}" class="logo-img" style="min-width: 300px" height="auto" alt="Logo">
                   </a>
                 </div>
               </div>
