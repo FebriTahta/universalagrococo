@@ -17,7 +17,7 @@ class ClientController extends Controller
                 'id' => $request->id
             ],
             [
-                'telp'=> $request->telp,
+                'telp'  => $request->telp,
                 'nama'     => $request->nama,
                 'komen'  => $request->komen,
                 'email' => $request->email,

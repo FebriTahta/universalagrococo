@@ -228,7 +228,7 @@
                   <div class="col-md-12 plr-0 lightbox-item">
                     <a href="#" >
                       <div class="port-img-overlay">
-                        <img class="port-main-img" src="{{asset('assets/images/portfolio/projects-3.jpg')}}" alt="img">
+                        <img class="port-main-img" src="{{asset('be_product/'.$item->img)}}" alt="img">
                       </div>
                       {{-- <div class="port-overlay-cont">
                         <div class="port-btn-cont">

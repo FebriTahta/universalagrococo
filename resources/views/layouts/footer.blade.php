@@ -1,4 +1,4 @@
-<footer>
+{{-- <footer>
     <div class="frame black"></div>
     <div class="container">
         <div class="row">
@@ -38,7 +38,7 @@
         </div>
         <p class="text-center"></p>
     </div>
-</footer>
+</footer> --}}
 <!--/footer-->
 
 <div id="toTop"></div><!-- Back to top button -->

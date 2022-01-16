@@ -14,7 +14,7 @@
                 <div class="head">
                     <div class="title">
                     <h3>Hi. {{$data->nama}}</h3>
-                    Terimakasih sudah menghubungi kami. Kami akan menghubungi anda secepatnya
+                    Thankyou for calling Us
                 </div>
                 </div>
                 <!-- /head -->
@@ -29,7 +29,11 @@
                             </svg>
                         </div>
                         <h3>Message Successfully Sent!</h3>
-                        <p>Kami akan menghubungi anda sesegera mungkin.</p>
+                        {{-- <p>Kami akan menghubungi anda sesegera mungkin.</p> --}}
+                        <p>We will contact you as soon as possible from your email / phone</p>
+                    </div>
+                    <div style="text-align: center">
+                        <a href="/" class="btn btn_1">BACK TO HOME</a>
                     </div>
                 </div>
             </div>

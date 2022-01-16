@@ -19,7 +19,7 @@
 		<meta name="author" content="ABCgomel">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		
+		<meta name="csrf-token" content="{{ csrf_token() }}" />
 		<!-- FAVICONS -->
     <link rel="shortcut icon" href="{{asset('assets/images/favicon/favicon.png')}}">
     <link rel="apple-touch-icon" href="{{asset('assets/images/favicon/apple-touch-icon.png')}}">
@@ -162,10 +162,13 @@
                       <li class="parent">
                         <a href="#about"><div class="main-menu-title">ABOUT US</div></a>
                       </li>
+
+					  <li class="parent">
+                        <a href="{{route('login')}}"><div class="main-menu-title">LOGIN</div></a>
+                      </li>
 									  </ul>
 					
 				  </div>
 				  <!-- END header-wrapper -->
-				  
 				</header>
 				

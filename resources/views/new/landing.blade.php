@@ -463,7 +463,7 @@
                               {{$item->name}}
                             </h2>
                             <p data-bottomtext="60%" class="bot-15-767 flex-bot-top " style="margin-left: 25px">
-                                <a class="button medium thin hover-dark tp-button dark" href="#0">CONTACT US</a>
+                                <a class="button medium thin hover-dark tp-button dark" href="{{$data_contact->whatsapp}}" target="_blank">CONTACT US</a>
                                 <a class="button medium thin hover-dark tp-button dark ml-20" href="/all-product">SEE DETAILS</a>
                             </p>
                             <img style="max-width: 500px" src="{{asset('be_product/'.$item->img)}}" class="item" alt="slide-item"  data-topimage="5%"/>
@@ -608,7 +608,7 @@
 <div class="relative" >
 <div id="mc_embed_signup" class="nl-form-container clearfix">
 <form action="http://abcgomel.us9.list-manage.com/subscribe/post-json?u=ba37086d08bdc9f56f3592af0&amp;id=e38247f7cc&amp;c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletterform validate" target="_blank" novalidate>   <!-- EDIT THIS ACTION URL (add "post-json?u" instead of "post?u" and appended "&amp;c=?" to the end of this URL) -->
-  <input type="email" value="" name="EMAIL" class="email nl-email-input" id="mce-EMAIL" placeholder="Enter your whatsapp number" required>
+  <input type="email" value="" class="email nl-email-input" id="mce-EMAIL" placeholder="Enter your whatsapp number" required>
   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
   <div style="position: absolute; left: -5000px;"><input type="text" name="b_ba37086d08bdc9f56f3592af0_e38247f7cc" tabindex="-1" value=""></div>
 
@@ -687,12 +687,11 @@
                 
   <!-- CONTACT FORM -->
   <div class="" id="">
-    <form id="contact-form" action="php/contact-form.php" method="POST">
-    
+    <form action="/client-message-post" method="post">@csrf
       <div class="row">
         <div class="col-md-12 mb-30">
           <!-- <label>Your name *</label> -->
-          <input type="text" value="" data-msg-required="Please enter your name" maxlength="100" class="controled" name="name" id="name" placeholder="NAME" required>
+          <input type="text" value="" data-msg-required="Please enter your name" maxlength="100" class="controled" name="nama" id="name" placeholder="NAME" required>
         </div>
       </div>
       
@@ -702,13 +701,58 @@
           <input type="email" value="" data-msg-required="Please enter your email address" data-msg-email="Please enter a valid email address" maxlength="100" class="controled" name="email" id="email" placeholder="EMAIL" required>
           </div>
       </div>
+
+      <div class="row">    
+        <div class="col-md-12 mb-30">
+          <!-- <label>Your email address *</label> -->
+          <input type="number" value="" data-msg-required="Please enter your phone number" data-msg-email="Please enter a valid email address" maxlength="100" class="controled" name="telp" id="telp" placeholder="PHONE NUMBER" required>
+          </div>
+      </div>
   
       <div class="row">
         <div class="col-md-12 mb-40">
           <!-- <label>Message *</label> -->
-          <textarea maxlength="5000" data-msg-required="Please enter your message" rows="3" class="controled" name="message" id="message" placeholder="MESSAGE" required></textarea>
+          <textarea maxlength="5000" data-msg-required="Please enter your message" rows="3" class="controled" name="komen" id="message" placeholder="MESSAGE" required></textarea>
         </div>
       </div>
+
+      
+      <div class="row">
+        <div class="col-md-12 text-center-xxs">
+          <input type="submit" value="SEND MESSAGE" class="button medium gray" data-loading-text="Loading...">
+        </div>
+      </div>
+    </form> 
+    {{-- <form id="contact-form" action="/client-message-post" method="POST">
+    @csrf
+      <div class="row">
+        <div class="col-md-12 mb-30">
+          <!-- <label>Your name *</label> -->
+          <input type="text" value="" data-msg-required="Please enter your name" maxlength="100" class="controled" name="nama" id="name" placeholder="NAME" required>
+        </div>
+      </div>
+      
+      <div class="row">    
+        <div class="col-md-12 mb-30">
+          <!-- <label>Your email address *</label> -->
+          <input type="email" value="" data-msg-required="Please enter your email address" data-msg-email="Please enter a valid email address" maxlength="100" class="controled" name="email" id="email" placeholder="EMAIL" required>
+          </div>
+      </div>
+
+      <div class="row">    
+        <div class="col-md-12 mb-30">
+          <!-- <label>Your email address *</label> -->
+          <input type="number" value="" data-msg-required="Please enter your phone number" data-msg-email="Please enter a valid email address" maxlength="100" class="controled" name="telp" id="telp" placeholder="PHONE NUMBER" required>
+          </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-12 mb-40">
+          <!-- <label>Message *</label> -->
+          <textarea maxlength="5000" data-msg-required="Please enter your message" rows="3" class="controled" name="komen" id="message" placeholder="MESSAGE" required></textarea>
+        </div>
+      </div>
+
       
       <div class="row">
         <div class="col-md-12 text-center-xxs">
@@ -716,14 +760,14 @@
         </div>
       </div>
       
-    </form>	
-    <div class="alert alert-success hidden animated fadeIn" id="contactSuccess" >
+    </form>	 --}}
+    {{-- <div class="alert alert-success hidden animated fadeIn" id="contactSuccess" >
       <strong>Success!</strong> Your message has been sent to us.
     </div>
   
     <div class="alert alert-danger hidden animated shake" id="contactError">
       <strong>Error!</strong> There was an error sending your message.
-    </div>
+    </div> --}}
   </div>
 </div>
 </div>
