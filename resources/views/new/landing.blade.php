@@ -127,9 +127,8 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-6 fes7-text-cont p-80-cont">
         <h1><span class="font-light">ABOUT US</span></h1>
-        <p class="mb-60">
-          We (UAC Indonesia) are an Indonesian manufacturing company engaged in plantations and supplying raw materials from fresh coconut to processed coconut products that have the highest value and benefits for our consumers. Our company is very expert in coconut derivative industry, we have the best experience, make our clients satisfied with every cooperation as a project.
-
+        <p class="mb-50">
+          {{$data_about->deskripsi}}
         </p>
       </div>
     </div><!--end of row-->

@@ -265,16 +265,16 @@
 								</li>
 								<li> <a href="{{route('be_about.page')}}"><i class="bx bx-right-arrow-alt"></i>About</a>
 								</li>
-								<li> <a href="{{route('be_special_off.page')}}"><i class="bx bx-right-arrow-alt"></i>Special Offer</a>
-								</li>
-								<li> <a href="{{route('be_invitation.page')}}"><i class="bx bx-right-arrow-alt"></i>Invitation</a>
+								{{-- <li> <a href="{{route('be_special_off.page')}}"><i class="bx bx-right-arrow-alt"></i>Special Offer</a>
+								</li> --}}
+								<li> <a href="{{route('be_invitation.page')}}"><i class="bx bx-right-arrow-alt"></i>Vission Mission</a>
 								</li>
 								<li> <a href="{{route('be_service.page')}}"><i class="bx bx-right-arrow-alt"></i>Service</a>
 								</li>
-								<li> <a href="{{route('be_imagehead.page')}}"><i class="bx bx-right-arrow-alt"></i>Image Header</a>
+								{{-- <li> <a href="{{route('be_imagehead.page')}}"><i class="bx bx-right-arrow-alt"></i>Image Header</a>
 								</li>
 								<li> <a href="{{route('be_imagemenu.page')}}"><i class="bx bx-right-arrow-alt"></i>Image Menu</a>
-								</li>
+								</li> --}}
 							</ul>
 						</li>
 						

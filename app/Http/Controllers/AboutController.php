@@ -134,7 +134,6 @@ class AboutController extends Controller
             <h2 id="about_header">'.$data->judul.'</h2>
             </div>
             <p>'.$data->deskripsi.'</p>
-            <p><img src='.$url.' width="140" height="50" alt="" class="mt-3"></p>
             ', 200);
         }
     }

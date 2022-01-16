@@ -63,20 +63,20 @@
                                     <textarea rows="5" class="form-control" name="deskripsi" id="validationTextarea" placeholder="-" required>{!!$data->deskripsi!!}</textarea>
                                     <div class="invalid-feedback">harus diisi</div>
                                 </div>
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <input onchange="showPreviewttd(event);" type="file" name="ttd" class="form-control" aria-label="file example" placeholder="boleh kosong" accept="image/*">
                                     <div class="invalid-feedback">harus diisi</div>
                                     <div class="gambar text-right">
                                         <img src="{{asset('be_img_about_ttd/'.$data->ttd)}}" width="140" height="50" alt="" id="preview_ttd" class="mt-3"><br>
                                         <small>140px x 50px</small>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="mb-3">
                                     <input onchange="showPreview(event);" type="file" name="img" class="form-control" aria-label="file example" accept="image/*">
                                     <div class="invalid-feedback">harus diisi</div><br>
                                     <div class="preview text-right">
-                                        <img src="{{asset('be_img_about/'.$data->img)}}" width="175" height="220" id="preview" class="img-thumbnail"><br>
-                                        <small>350px x 440px</small>
+                                        <img src="{{asset('be_img_about/'.$data->img)}}" width="200" id="preview" class="img-thumbnail"><br>
+                                        {{-- <small>350px x 440px</small> --}}
                                     </div>
                                 </div>
                                 <input type="submit" id="btnaddslider" class="btn btn-primary" value="SUBMIT"><br>

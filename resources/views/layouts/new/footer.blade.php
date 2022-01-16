@@ -73,7 +73,7 @@
       <!-- FLEX SLIDER SCRIPTS  -->
 		<script src="{{asset('assets/js/jquery.flexslider-min.js')}}"></script> 
 		<script src="{{asset('assets/js/flex-slider.js')}}"></script> 
-
+    
       <script>
 
           jQuery(document).ready(function() {

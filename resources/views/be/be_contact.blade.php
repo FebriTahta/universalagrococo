@@ -83,8 +83,8 @@
                                     <input onchange="showPreviewttd(event);" type="file" name="img_light" class="form-control" aria-label="file example" placeholder="boleh kosong" accept="image/*" >
                                     <div class="invalid-feedback">harus diisi</div>
                                     <div class="gambar text-right">
-                                        <img src="{{asset('be_contact_logo/'.$data->img_light)}}" width="200" height="50" alt="" id="preview_ttd" class="mt-3"><br>
-                                        <small>200px x 50px</small>
+                                        <img src="{{asset('be_contact_logo/'.$data->img_light)}}" width="150" height="50" alt="" id="preview_ttd" class="mt-3"><br>
+                                        <small>Sesuaikan Logo</small>
                                     </div>
                                 </div>
                                 <div class="mb-3">
@@ -92,8 +92,8 @@
                                     <input onchange="showPreview(event);" type="file" name="img_dark" class="form-control" aria-label="file example" accept="image/*" >
                                     <div class="invalid-feedback">harus diisi</div><br>
                                     <div class="preview text-right">
-                                        <img src="{{asset('be_contact_logo/'.$data->img_dark)}}" width="200" height="50" id="preview" class="mt-3"><br>
-                                        <small>200px x 50px</small>
+                                        <img src="{{asset('be_contact_logo/'.$data->img_dark)}}" width="150" height="50" id="preview" class="mt-3"><br>
+                                        <small>Sesuaikan logo</small>
                                     </div>
                                 </div>
                                 <input type="submit" id="btnaddslider" class="btn btn-primary" value="SUBMIT"><br>
