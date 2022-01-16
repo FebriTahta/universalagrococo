@@ -161,7 +161,7 @@
                 
             </div>
             <h3><span class="bold">{{$item->name}}</span></h3>
-                <p>_</p>
+                {{-- <p>_</p> --}}
             <div>
               {{$item->deskripsi}}
             </div>
