@@ -47,31 +47,31 @@
            <div class="row">
                 <div class="card-body col-xl-6">
                     <div class="card-body">
-                        <h5>HEADER ABOUT US</h5>
+                        <h5>FOOTER SOCMED</h5>
                     </div>
                     <div class="modal-body">
                         <form id="formsubmit1" class="was-validated" enctype="multipart/form-data" method="post">@csrf
                             <input type="hidden" name="id" value="{{$header_about->id}}">
                             <div class="p-4 border rounded">
                                 <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">JUDUL</label>
+                                    <label for="validationServer01" class="form-label">LINK FACEBOOK</label>
                                     <input value="{{$header_about->judul}}" type="text" name="judul" class="form-control" placeholder="-" required>
                                     <div class="invalid-feedback">harus diisi</div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">SUB JUDUL</label>
+                                    <label for="validationServer01" class="form-label">NAME</label>
                                     <input value="{{$header_about->subjudul}}" type="text" name="subjudul" class="form-control" placeholder="-" required>
                                     <div class="invalid-feedback">harus diisi</div>
                                 </div>
                                 
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <input onchange="showPreview1(event);" type="file" name="bg" class="form-control" aria-label="file example" accept="image/*">
                                     <div class="invalid-feedback">harus diisi</div><br>
                                     <div class="preview text-right">
                                         <img src="{{asset('be_header/'.$header_about->bg)}}" width="350" height="200" id="preview" class="img-thumbnail"><br>
                                         <small>1400px x 800px</small>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <input type="submit" id="btnadd1" class="btn btn-primary" value="SUBMIT"><br>
                             </div>
                         </form>
@@ -79,31 +79,31 @@
                 </div>
                 <div class="card-body col-xl-6">
                     <div class="card-body">
-                        <h5>HEADER ALL PRODUCT</h5>
+                        <h5>FOOTER SOCMED</h5>
                     </div>
                     <div class="modal-body">
                         <form id="formsubmit2" class="was-validated" enctype="multipart/form-data" method="post">@csrf
                             <input type="hidden" name="id" value="{{$header_product->id}}">
                             <div class="p-4 border rounded">
                                 <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">JUDUL</label>
+                                    <label for="validationServer01" class="form-label">LINK TWITTER</label>
                                     <input value="{{$header_product->judul}}" type="text" name="judul" class="form-control" placeholder="-" required>
                                     <div class="invalid-feedback">harus diisi</div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">SUB JUDUL</label>
+                                    <label for="validationServer01" class="form-label">NAME</label>
                                     <input value="{{$header_product->subjudul}}" type="text" name="subjudul" class="form-control" placeholder="-" required>
                                     <div class="invalid-feedback">harus diisi</div>
                                 </div>
                                 
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <input onchange="showPreview2(event);" type="file" name="bg" class="form-control" aria-label="file example" accept="image/*">
                                     <div class="invalid-feedback">harus diisi</div><br>
                                     <div class="preview text-right">
                                         <img src="{{asset('be_header/'.$header_product->bg)}}" width="350" height="200" id="preview2" class="img-thumbnail"><br>
                                         <small>1400px x 800px</small>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <input type="submit" id="btnadd2" class="btn btn-primary" value="SUBMIT"><br>
                             </div>
                         </form>
@@ -111,31 +111,31 @@
                 </div>
                 <div class="card-body col-xl-6">
                     <div class="card-body">
-                        <h5>HEADER CONTACT</h5>
+                        <h5>FOOTER SOCMED</h5>
                     </div>
                     <div class="modal-body">
                         <form id="formsubmit3" class="was-validated" enctype="multipart/form-data" method="post">@csrf
                             <input type="hidden" name="id" value="{{$header_contact->id}}">
                             <div class="p-4 border rounded">
                                 <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">JUDUL</label>
+                                    <label for="validationServer01" class="form-label">LINK INSTAGRAM</label>
                                     <input value="{{$header_contact->judul}}" type="text" name="judul" class="form-control" placeholder="-" required>
                                     <div class="invalid-feedback">harus diisi</div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">SUB JUDUL</label>
+                                    <label for="validationServer01" class="form-label">NAME</label>
                                     <input value="{{$header_contact->subjudul}}" type="text" name="subjudul" class="form-control" placeholder="-" required>
                                     <div class="invalid-feedback">harus diisi</div>
                                 </div>
                                 
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <input onchange="showPreview3(event);" type="file" name="bg" class="form-control" aria-label="file example" accept="image/*">
                                     <div class="invalid-feedback">harus diisi</div><br>
                                     <div class="preview text-right">
                                         <img src="{{asset('be_header/'.$header_contact->bg)}}" width="350" height="200" id="preview3" class="img-thumbnail"><br>
                                         <small>1400px x 800px</small>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <input type="submit" id="btnadd3" class="btn btn-primary" value="SUBMIT"><br>
                             </div>
                         </form>
@@ -143,31 +143,31 @@
                 </div>
                 <div class="card-body col-xl-6">
                     <div class="card-body">
-                        <h5>HEADER BLOG</h5>
+                        <h5>FOOTER SOCMED</h5>
                     </div>
                     <div class="modal-body">
                         <form id="formsubmit4" class="was-validated" enctype="multipart/form-data" method="post">@csrf
                             <input type="hidden" name="id" value="{{$header_blog->id}}">
                             <div class="p-4 border rounded">
                                 <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">JUDUL</label>
+                                    <label for="validationServer01" class="form-label">LINK LINKEDIN</label>
                                     <input value="{{$header_blog->judul}}" type="text" name="judul" class="form-control" placeholder="-" required>
                                     <div class="invalid-feedback">harus diisi</div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">SUB JUDUL</label>
+                                    <label for="validationServer01" class="form-label">NAME</label>
                                     <input value="{{$header_blog->subjudul}}" type="text" name="subjudul" class="form-control" placeholder="-" required>
                                     <div class="invalid-feedback">harus diisi</div>
                                 </div>
                                 
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <input onchange="showPreview4(event);" type="file" name="bg" class="form-control" aria-label="file example" accept="image/*">
                                     <div class="invalid-feedback">harus diisi</div><br>
                                     <div class="preview text-right">
                                         <img src="{{asset('be_header/'.$header_blog->bg)}}" width="350" height="200" id="preview4" class="img-thumbnail"><br>
                                         <small>1400px x 800px</small>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <input type="submit" id="btnadd4" class="btn btn-primary" value="SUBMIT"><br>
                             </div>
                         </form>

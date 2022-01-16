@@ -271,9 +271,9 @@
 								</li>
 								<li> <a href="{{route('be_service.page')}}"><i class="bx bx-right-arrow-alt"></i>Service</a>
 								</li>
-								{{-- <li> <a href="{{route('be_imagehead.page')}}"><i class="bx bx-right-arrow-alt"></i>Image Header</a>
+								<li> <a href="{{route('be_imagehead.page')}}"><i class="bx bx-right-arrow-alt"></i>Social Media</a>
 								</li>
-								<li> <a href="{{route('be_imagemenu.page')}}"><i class="bx bx-right-arrow-alt"></i>Image Menu</a>
+								{{-- <li> <a href="{{route('be_imagemenu.page')}}"><i class="bx bx-right-arrow-alt"></i>Image Menu</a>
 								</li> --}}
 							</ul>
 						</li>
@@ -298,8 +298,8 @@
 								<div class="menu-title">Interaction</div>
 							</a>
 							<ul>
-								<li> <a href="{{route('be_produkomen.page')}}"><i class="bx bx-right-arrow-alt"></i>Product Comments</a>
-								</li>
+								{{-- <li> <a href="{{route('be_produkomen.page')}}"><i class="bx bx-right-arrow-alt"></i>Product Comments</a>
+								</li> --}}
 								<li> <a href="{{route('be_client.page')}}"><i class="bx bx-right-arrow-alt"></i>Client</a>
 								</li>
 							</ul>
