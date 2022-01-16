@@ -9,127 +9,68 @@
         
         <div id="rs-fullwidth" class="tp-banner dark-bg" >
             <ul>	
+              @foreach ($data_slider as $item)
+              <li data-transition="zoomout" data-slotamount="1" data-masterspeed="1500" data-thumb="{{asset('assets/images/revo-slider/terka-thumb.jpg')}}"  data-saveperformance="on"  data-title="HASWELL">
+                <!-- MAIN IMAGE -->
+                 
+                <img src="{{asset('be_slider/'.$item->img)}}"  alt="slidebg1" data-lazyload="{{asset('be_slider/'.$item->img)}}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                
+                <!-- LAYERS -->
+                
+                <!--PARALLAX & OPACITY container -->
+                <div class="rs-parallaxlevel-4 opacity-scroll2">
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption font-white light-73-wide sfb tp-resizeme"
+                        data-x="center" 
+  data-hoffset="0" 
+  data-y="center" 
+  data-voffset="-50" 
+                        data-speed="500"
+                        data-start="850"
+                        data-easing="Power1.easeInOut"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.1"
+                        data-endelementdelay="0.1"
+                        style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"> <span class="bold"> UAC</span>
+                    </div>
+                    
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption font-white norm-16-wide tp-left sfb tp-resizeme hide-0-736"
+                        data-x="center" 
+  data-hoffset="0" 
+  data-y="center" 
+  data-voffset="25" 
+                        data-speed="900"
+                        data-start="1500"
+                        data-easing="Power3.easeInOut"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.1"
+                        data-endelementdelay="0.1"
+                        style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">UNIVERSAL AGRO COCO
+                    </div>
 
+<!-- LAYER NR. 3 -->
+                    <div class="tp-caption center-0-478 sfb"
+                        data-x="center" 
+  data-hoffset="0" 
+  data-y="center" 
+  data-voffset="115" 
+                        data-speed="900"
+                        data-start="1350"
+                        data-easing="Power3.easeInOut"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.1"
+                        data-endelementdelay="0.1"
+                        style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+                    </div>
+
+                </div>
+            </li>
+              @endforeach
                 <!-- SLIDE 1 -->
-                <li data-transition="zoomout" data-slotamount="1" data-masterspeed="1500" data-thumb="{{asset('assets/images/revo-slider/terka-thumb.jpg')}}"  data-saveperformance="on"  data-title="HASWELL">
-                    <!-- MAIN IMAGE -->
-                     
-                    <img src="{{asset('assets/images/revo-slider/dummy.png')}}"  alt="slidebg1" data-lazyload="{{asset('assets/images/revo-slider/slide_2_1.jpg')}}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                    
-                    <!-- LAYERS -->
-                    
-                    <!--PARALLAX & OPACITY container -->
-                    <div class="rs-parallaxlevel-4 opacity-scroll2">
-                        <!-- LAYER NR. 1 -->
-                        <div class="tp-caption font-white light-73-wide sfb tp-resizeme"
-                            data-x="center" 
-      data-hoffset="0" 
-      data-y="center" 
-      data-voffset="-50" 
-                            data-speed="500"
-                            data-start="850"
-                            data-easing="Power1.easeInOut"
-                            data-splitin="none"
-                            data-splitout="none"
-                            data-elementdelay="0.1"
-                            data-endelementdelay="0.1"
-                            style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"> <span class="bold"> UAC</span>
-                        </div>
-                        
-                        <!-- LAYER NR. 2 -->
-                        <div class="tp-caption font-white norm-16-wide tp-left sfb tp-resizeme hide-0-736"
-                            data-x="center" 
-      data-hoffset="0" 
-      data-y="center" 
-      data-voffset="25" 
-                            data-speed="900"
-                            data-start="1500"
-                            data-easing="Power3.easeInOut"
-                            data-splitin="none"
-                            data-splitout="none"
-                            data-elementdelay="0.1"
-                            data-endelementdelay="0.1"
-                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">UNIVERSAL AGRO COCO
-                        </div>
-    
-    <!-- LAYER NR. 3 -->
-                        <div class="tp-caption center-0-478 sfb"
-                            data-x="center" 
-      data-hoffset="0" 
-      data-y="center" 
-      data-voffset="115" 
-                            data-speed="900"
-                            data-start="1350"
-                            data-easing="Power3.easeInOut"
-                            data-splitin="none"
-                            data-splitout="none"
-                            data-elementdelay="0.1"
-                            data-endelementdelay="0.1"
-                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
-                        </div>
-    
-                    </div>
-                </li>
-
-                <li data-transition="zoomout" data-slotamount="1" data-masterspeed="1500" data-thumb="{{asset('assets/images/revo-slider/terka-thumb.jpg')}}"  data-saveperformance="on"  data-title="HASWELL">
-                    <!-- MAIN IMAGE -->
-                     
-                    <img src="{{asset('assets/images/revo-slider/dummy.png')}}"  alt="slidebg1" data-lazyload="{{asset('assets/images/revo-slider/slide_2_1.jpg')}}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                    
-                    <!-- LAYERS -->
-                    
-                    <!--PARALLAX & OPACITY container -->
-                    <div class="rs-parallaxlevel-4 opacity-scroll2">
-                        <!-- LAYER NR. 1 -->
-                        <div class="tp-caption font-white light-73-wide sfb tp-resizeme"
-                            data-x="center" 
-      data-hoffset="0" 
-      data-y="center" 
-      data-voffset="-50" 
-                            data-speed="500"
-                            data-start="850"
-                            data-easing="Power1.easeInOut"
-                            data-splitin="none"
-                            data-splitout="none"
-                            data-elementdelay="0.1"
-                            data-endelementdelay="0.1"
-                            style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"> <span class="bold"> TITLE</span>
-                        </div>
-                        
-                        <!-- LAYER NR. 2 -->
-                        <div class="tp-caption font-white norm-16-wide tp-left sfb tp-resizeme hide-0-736"
-                            data-x="center" 
-      data-hoffset="0" 
-      data-y="center" 
-      data-voffset="25" 
-                            data-speed="900"
-                            data-start="1500"
-                            data-easing="Power3.easeInOut"
-                            data-splitin="none"
-                            data-splitout="none"
-                            data-elementdelay="0.1"
-                            data-endelementdelay="0.1"
-                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">DESCRIPTIONS
-                        </div>
-    
-    <!-- LAYER NR. 3 -->
-                        <div class="tp-caption center-0-478 sfb"
-                            data-x="center" 
-      data-hoffset="0" 
-      data-y="center" 
-      data-voffset="115" 
-                            data-speed="900"
-                            data-start="1350"
-                            data-easing="Power3.easeInOut"
-                            data-splitin="none"
-                            data-splitout="none"
-                            data-elementdelay="0.1"
-                            data-endelementdelay="0.1"
-                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
-                        </div>
-    
-                    </div>
-                </li>
                 
 
             </ul>
@@ -159,14 +100,14 @@
 <!-- CLIENTS 1 -->
 <div class="col-md-6">
   <blockquote class="quote mb-0 m-p-0">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.</p>
+    <p>{{$data_invitation->judul_heading}}</p>
     <footer>Our Vision.</footer>
    </blockquote>
   </div>
 <!-- TESTIMONIALS 1 -->
 <div class="col-md-6">
 <blockquote class="quote mb-0 m-p-0">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.</p>
+  <p>{{$data_invitation->judul_mini}}</p>
   <footer>Our Mission.</footer>
  </blockquote>
 </div>
@@ -202,30 +143,35 @@
 <!-- FEATURES 4 -->
 <div class="page-section fes4-cont">
     <div class="container">
-<div class="row">
-
-<div class="col-xs-12 col-sm-4 col-md-4">
-<div class="fes4-box wow fadeIn">
-                  <h2 class="section-title">OUR <span class="bold">SERVICES</span></h2>
-                </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <div class="fes4-box wow fadeIn">
+            <h2 class="section-title">OUR <span class="bold">SERVICES</span></h2>
+          </div>
+        </div>
+      </div>
+        
+      <div class="row">
+        @foreach ($service as $item)
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+            <div class="fes4-title-cont" >
+                {{-- <div class="fes4-box-icon">
+                    <div class="icon icon-basic-settings"></div>
+                </div> --}}
+                
             </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4">
-<div class="fes4-box wow fadeIn" data-wow-delay="200ms">
-                  <div class="fes4-title-cont" >
-                      <div class="fes4-box-icon">
-                          <div class="icon icon-basic-settings"></div>
-                      </div>
-                      <h3><span class="bold">COMMITMENT</span></h3>
-                      <p>_</p>
-                  </div>
-                  <div>
-                    Commitment or cooperation is important for the company where we are very enthusiastic to maintain commitment to the client so that client satisfaction remains an evaluation for us to be better
-                  </div>
-                </div>
+            <h3><span class="bold">{{$item->name}}</span></h3>
+                <p>_</p>
+            <div>
+              {{$item->deskripsi}}
             </div>
-<div class="col-xs-12 col-sm-4 col-md-4">
-<div class="fes4-box wow fadeIn" data-wow-delay="400ms">
+          </div>
+        </div>
+        @endforeach
+            
+            {{-- <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="fes4-box wow fadeIn" data-wow-delay="400ms">
                   <div class="fes4-title-cont" >
                       <div class="fes4-box-icon">
                           <div class="icon icon-basic-share"></div>
@@ -237,44 +183,9 @@
                     Innovation covered by ideas, new ideas, and analytical research can develop a product that aims to compete and have its own appeal in the international market.
                   </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
-        <div class="row">
-
-<div class="col-xs-12 col-sm-4 col-md-4">
-
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-<div class="fes4-box wow fadeIn" data-wow-delay="800ms" >
-                  <div class="fes4-title-cont" >
-                      <div class="fes4-box-icon">
-                          <div class="icon icon-basic-globe"></div>
-                      </div>
-                      <h3><span class="bold">INTEGRITY</span></h3>
-                      <p>_</p>
-                  </div>
-                  <div>
-                    Integrity is a principle that we have instilled since the company was founded. Our company has good integrity by telling the truth without hiding anything, keeping the deals that have been made, and being consistent all the time.
-                  </div>
-                </div>
-            </div>
-<div class="col-xs-12 col-sm-4 col-md-4">
-<div class="fes4-box wow fadeIn" data-wow-delay="1000ms">
-                  <div class="fes4-title-cont" >
-                      <div class="fes4-box-icon">
-                          <div class="icon icon-basic-picture"></div>
-                      </div>
-                      <h3><span class="bold">QUALITY</span></h3>
-                      <p>_</p>
-                  </div>
-                  <div>
-                    The real quality of both quality products and services is the main thing for companies to maintain company value
-                  </div>
-                </div>
-            </div>              
-        
-</div>
     </div>
 </div>
 

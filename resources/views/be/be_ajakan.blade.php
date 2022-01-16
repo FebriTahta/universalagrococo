@@ -45,15 +45,15 @@
             @endif --}}
 
            <div class="row">
-                <div class="card-body col-xl-6">
+                <div class="card-body col-xl-12">
                     <div class="card-body">
-                        <h5>SECTION INVITATION</h5>
+                        <h5>VISION MISSION</h5>
                     </div>
                     <div class="modal-body">
                         <form id="formsubmitabout" class="was-validated" enctype="multipart/form-data" method="post">@csrf
                             <input type="hidden" name="id" value="{{$data->id}}">
                             <div class="p-4 border rounded">
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <label for="validationServer01" class="form-label">TITLE HEADER</label>
                                     <input value="{{$data->judul_heading}}" type="text" name="judul_heading" class="form-control" placeholder="-" required>
                                     <div class="invalid-feedback">harus diisi</div>
@@ -62,33 +62,29 @@
                                     <label for="validationServer01" class="form-label">TITLE MINI</label>
                                     <input value="{{$data->judul_mini}}" type="text" name="judul_mini" class="form-control" placeholder="-" required>
                                     <div class="invalid-feedback">harus diisi</div>
-                                </div>
+                                </div> --}}
                                 <div class="mb-3">
-                                    <label for="validationTextarea" class="form-label">CONTENT DESCRIPTION</label>
-                                    <textarea rows="5" class="form-control" name="deskripsi" id="validationTextarea" placeholder="-" required>{!!$data->deskripsi!!}</textarea>
+                                    <label for="validationTextarea" class="form-label">VISION</label>
+                                    <textarea rows="5" class="form-control" name="judul_heading" id="validationTextarea" placeholder="-" required>{!!$data->judul_heading!!}</textarea>
                                     <div class="invalid-feedback">harus diisi</div>
                                 </div>
                                 <div class="mb-3">
+                                    <label for="validationTextarea" class="form-label">MISSION</label>
+                                    <textarea rows="5" class="form-control" name="judul_mini" id="validationTextarea" placeholder="-" required>{!!$data->judul_mini!!}</textarea>
+                                    <div class="invalid-feedback">harus diisi</div>
+                                </div>
+                                {{-- <div class="mb-3">
                                     <input onchange="showPreview(event);" type="file" name="bg" class="form-control" aria-label="file example" accept="image/*">
                                     <div class="invalid-feedback">harus diisi</div><br>
                                     <div class="preview text-right">
                                         <img src="{{asset('be_invitation_bg/'.$data->bg)}}" width="200" height="100" id="preview_bg" class="img-thumbnail"><br>
                                         <small>1600px x 1000px</small>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <input type="submit" id="btnaddslider" class="btn btn-primary" value="SUBMIT"><br>
                             </div>
                         </form>
                     </div>
-                </div>
-                <div class="pattern_2 card-body col-xl-6">
-                    <div class="card-body">
-                        <h5>PREVIEW</h5>
-                    </div>
-                    <div class="call_section lazy card-body" id="preview_so">
-                        
-                    </div>
-                    <!--/container -->
                 </div>
            </div>
         </div>
@@ -108,17 +104,6 @@
             preview.src = src;
         }
     }
-    $(document).ready(function(){
-        $.ajax({
-            url:"{{ route('be_invitation_off.preview')}}",
-            type: 'get',
-            dataType: 'json',
-                success:function(data) {
-                    document.getElementById('preview_so').innerHTML = data;
-                    console.log(data);
-            }
-        });
-    })
 
     // store data
     $('#formsubmitabout').submit(function(e) {

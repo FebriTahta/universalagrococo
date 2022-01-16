@@ -16,9 +16,9 @@ class InvitationController extends Controller
     public function be_invitation_store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'judul_mini'    => 'required|max:50',
-            'judul_heading' => 'required|max:50',
-            'deskripsi'     => 'max:255',
+            'judul_mini'    => 'required|max:5000',
+            'judul_heading' => 'required|max:5000',
+            'deskripsi'     => 'max:5000',
             'bg'            => 'mimes:jpeg,jpg,png,gif',            
         ]);
         if ($validator->fails()) {
