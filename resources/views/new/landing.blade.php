@@ -152,7 +152,7 @@
         
       <div class="row">
         @foreach ($service as $item)
-        <div class="col-xs-12 col-sm-3 col-md-3">
+        <div class="col-xs-12 col-sm-6 col-md-6">
           <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
             <div class="fes4-title-cont" >
                 {{-- <div class="fes4-box-icon">
