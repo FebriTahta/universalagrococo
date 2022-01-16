@@ -466,7 +466,7 @@
                                 <a class="button medium thin hover-dark tp-button dark" href="#0">CONTACT US</a>
                                 <a class="button medium thin hover-dark tp-button dark ml-20" href="/all-product">SEE DETAILS</a>
                             </p>
-                            <img style="max-width: 500px" src="{{asset('be_product/'.$item->img)}}" class="item" alt="slide-item"  data-topimage="19%"/>
+                            <img style="max-width: 500px" src="{{asset('be_product/'.$item->img)}}" class="item" alt="slide-item"  data-topimage="5%"/>
                         </div>
                     </div><!-- End Container -->
                 </li><!-- End item -->
