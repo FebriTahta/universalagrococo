@@ -542,7 +542,7 @@
   </div>
   <div class="cis-text">
     <h3><span class="bold">ADDRESS</span></h3>
-    <p>Jl. Sidosermo I No.8a</p>
+    <p>{{$data_contact->alamat}}</p>
   </div>
 </div>
 </div>
@@ -553,7 +553,7 @@
   </div>
   <div class="cis-text">
     <h3><span class="bold">EMAIL</span></h3>
-    <p><a href="mailto:info@haswell.com">UAC@GMAIL.COM</a></p>
+    <p><a href="mailto:info@haswell.com">{{$data_contact->email}}</a></p>
   </div>
 </div>
 </div>
@@ -564,7 +564,7 @@
   </div>
   <div class="cis-text">
     <h3><span class="bold">PHONE</span></h3>
-    <p>031-7498401</p>
+    <p>{{$data_contact->telp}}</p>
   </div>
 </div>
 </div>
