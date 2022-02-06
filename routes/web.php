@@ -50,6 +50,9 @@ Route::post('/komen-product-post',[KomentarController::class,'komen_store'])->na
 Route::post('/client-message-post',[ClientController::class,'client_store'])->name('client.store');
 //AFTERMESSAGE
 Route::get('/message-sent/{slug_client}',[ClientController::class,'after_message']);
+// DETAIL PRODUCT
+Route::get('/coconut-product/{slug_product}',[ProductController::class,'detail_product'])->name('detail.product');
+
 
 
 Route::group(['middleware' => ['auth', 'CheckRole:admin']], function () {

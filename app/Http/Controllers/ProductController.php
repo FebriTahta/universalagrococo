@@ -20,7 +20,7 @@ class ProductController extends Controller
         $data_product   = Product::all();
         $data_product_limit = Product::limit(5)->get();
         // return view('product.list',compact('data_contact','data_product','header_product'));
-        return view('new.product',compact('data_contact','data_product','header_product','data_product_limit'));
+        return view('new.product2',compact('data_contact','data_product','header_product','data_product_limit'));
     }
 
     public function detail($slug_product)
@@ -150,5 +150,13 @@ class ProductController extends Controller
             'message' => 'Product has been Deleted'
             ]
         );
+    }
+
+    public function detail_product($slug_product)
+    {
+        $data_product = Product::all();
+        $product  = Product::where('slug', $slug_product)->first();
+        $data_contact   = Profile::where('id',1)->first();
+        return view('layouts.new2.detail_product',compact('product','data_product','data_contact'));
     }
 }

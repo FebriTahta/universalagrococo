@@ -29,7 +29,7 @@ class LandingController extends Controller
         $social        = Imageheader::all();
         // return view('home.index',compact('data_slider','data_product','data_about','data_contact'
         // ,'data_special','data_invitation','menu_product','menu_contact','menu_profile'));
-        return view('new.landing',compact('data_slider','data_product','data_about','data_contact'
+        return view('new.landing2',compact('data_slider','data_product','data_about','data_contact'
         ,'data_special','data_invitation','menu_product','menu_contact','menu_profile','service','social'));
     }
 }
