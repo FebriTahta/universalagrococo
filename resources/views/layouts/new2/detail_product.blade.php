@@ -204,8 +204,9 @@
         }
 
         @media (max-width: 500px) {
-            .logo2 a img {
-                min-width: 100px;
+            .logo-img {
+                min-width: 150px;
+                height: auto;
             }
 
             .tp-caption {
