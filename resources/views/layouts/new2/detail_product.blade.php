@@ -354,7 +354,7 @@
             </header>
 
             <!-- PAGE TITLE SMALL -->
-            <div class="page-title-cont page-title-small grey-light-bg">
+            <div class="page-title-cont page-title-small grey-light-bg" style="margin-top: 20px">
                 <div class="relative container align-left">
                     <div class="row">
 
