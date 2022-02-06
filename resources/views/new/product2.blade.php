@@ -631,12 +631,14 @@
                             <h4>RECENT POSTS</h4>
                             <div id="post-list-footer">
                                 <ul class="nav navbar-nav" id="nav-sidebar">
-                                    @foreach ($data_product as $item)
+                                    
                                         <div class="post-prev-title">
+                                            @foreach ($data_product as $item)
                                             <h3><a class="a-text" style="text-transform: uppercase"
                                                     href="#{{ $item->slug }}">{{ $item->name }}</a></h3>
+                                            @endforeach
                                         </div>
-                                    @endforeach
+                                    
                                 </ul>
                             </div>
                         </div>
