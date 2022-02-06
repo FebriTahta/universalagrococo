@@ -303,7 +303,7 @@
                                     <nav class="collapse collapsing navbar-collapse right-1024">
                                         <ul class="nav navbar-nav">
 
-                                            <li class="parent {{ Request::routeIs('landing') ? 'current' : '' }}">
+                                            <li class=" {{ Request::routeIs('landing') ? 'current' : '' }}">
                                                 <a href="/">
                                                     <div class="main-menu-title">HOME</div>
                                                 </a>
@@ -311,19 +311,19 @@
 
                                             <!-- MENU ITEM -->
                                             <li
-                                                class="parent {{ Request::routeIs('all.product') ? 'current' : '' }}">
+                                                class=" {{ Request::routeIs('all.product') ? 'current' : '' }}">
                                                 <a href="{{ route('all.product') }}">
                                                     <div class="main-menu-title">PRODUCT</div>
                                                 </a>
                                             </li>
 
-                                            <li class="parent">
+                                            <li class="">
                                                 <a href="/">
                                                     <div class="main-menu-title">ABOUT US</div>
                                                 </a>
                                             </li>
 
-                                            <li class="parent">
+                                            <li class="">
                                                 <a href="#contact">
                                                     <div class="main-menu-title">CONTACT</div>
                                                 </a>

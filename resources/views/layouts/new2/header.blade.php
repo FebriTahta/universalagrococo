@@ -188,7 +188,7 @@
 
                                                 <!-- MENU ITEM -->
                                                 <li
-                                                    class="parent {{ Request::routeIs('landing') ? 'current' : '' }}">
+                                                    class=" {{ Request::routeIs('landing') ? 'current' : '' }}">
                                                     <a href="/">
                                                         <div class="main-menu-title">HOME</div>
                                                     </a>
@@ -196,19 +196,19 @@
 
                                                 <!-- MENU ITEM -->
                                                 <li
-                                                    class="parent parent {{ Request::routeIs('all.product') ? 'current' : '' }}">
+                                                    class=" {{ Request::routeIs('all.product') ? 'current' : '' }}">
                                                     <a href="/all-product">
                                                         <div class="main-menu-title">PRODUCT</div>
                                                     </a>
                                                 </li>
 
-                                                <li class="parent">
+                                                <li class="">
                                                     <a href="#contact">
                                                         <div class="main-menu-title">CONTACT</div>
                                                     </a>
                                                 </li>
 
-                                                <li class="parent">
+                                                <li class="">
                                                     <a href="#about">
                                                         <div class="main-menu-title">ABOUT US</div>
                                                     </a>
@@ -216,7 +216,7 @@
 
                                                 @auth
                                                 @else
-                                                    <li class="parent">
+                                                    <li class="">
                                                         <a href="{{ route('login') }}">
                                                             <div class="main-menu-title">LOGIN</div>
                                                         </a>
