@@ -191,7 +191,36 @@
 
     <!-- Modernizr -->
     <!-- <script src="js/modernizr.js"></script> -->
+    <style>
+        @media (min-width: 501px) {
+            .logo-img {
+                min-width: 250px;
+                height: auto;
+            }
 
+            .tulisan {
+                display: none;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .logo2 a img {
+                min-width: 100px;
+            }
+
+            .tp-caption {
+                width: 350px;
+                height: auto;
+                box-sizing: border-box
+            }
+
+            .tp-caption img {
+                display: none;
+            }
+
+        }
+
+    </style>
 </head>
 
 <body>
@@ -244,9 +273,9 @@
                             <!-- LOGO -->
                             <div class="logo-container-2">
                                 <div class="logo-2">
-                                    <a href="/" class="clearfix">
-                                        <img src="{{ asset('assets/images/logo.png') }}" class="logo-img"
-                                            alt="Logo">
+                                    <a href="/" class="clearfix"><?php $p = App\Models\Profile::where('id', 1)->first(); ?>
+                                        <img src="{{ asset('be_contact_logo/' . $p->img_light) }}"
+                                            class="logo-img logo-color-change" alt="Logo">
                                     </a>
                                 </div>
                             </div>
