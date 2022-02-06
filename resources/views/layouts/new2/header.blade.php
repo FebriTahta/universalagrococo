@@ -184,7 +184,7 @@
 
                                         <!-- MAIN MENU LIST -->
                                         <nav class="collapse collapsing navbar-collapse right-1024">
-                                            <ul class="nav navbar-nav">
+                                            <ul class="nav navbar-nav" id="nav-sidebar">
 
                                                 <!-- MENU ITEM -->
                                                 <li
