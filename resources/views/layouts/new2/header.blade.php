@@ -18,6 +18,7 @@
     <title>UAC</title>
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta property="og:image" itemprop="image" content="https://uac-id.com/be_contact_logo/{{$profile->img_dark}}">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="Universal Agro Coco">
     <meta name="description" content="{{$about->deskripsi}}">
@@ -31,7 +32,6 @@
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
     <link rel="apple-touch-icon" sizes="114x114"
         href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
-        <meta property="og:image" itemprop="image" content="https://uac-id.com/be_contact_logo/{{$profile->img_dark}}">
 
     <!-- CSS -->
     <!-- REVOLUTION STYLE SHEETS -->

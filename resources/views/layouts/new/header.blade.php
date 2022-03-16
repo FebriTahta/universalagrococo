@@ -17,18 +17,20 @@
 		<title>UAC</title>
 		<meta charset="utf-8">
 		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-		<meta name="robots" content="index, follow" > 
-		<meta name="keywords" content="Universal Agro Coco" > 
-		<meta name="description" content="{{$about->deskripsi}}" > 
+		<meta property="og:image" itemprop="image" content="https://uac-id.com/be_contact_logo/{{$profile->img_dark}}">
+		<meta name="robots" content="index, follow">
+		<meta name="keywords" content="Universal Agro Coco">
+		<meta name="description" content="{{$about->deskripsi}}">
 		<meta name="author" content="U A C">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="csrf-token" content="{{ csrf_token() }}" />
 		<!-- FAVICONS -->
-    <link rel="shortcut icon" href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
-    <link rel="apple-touch-icon" href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
+		<link rel="shortcut icon" href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
+		<link rel="apple-touch-icon" href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
+		<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
+		<link rel="apple-touch-icon" sizes="114x114"
+			href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
 		
 <!-- CSS -->
     <!-- REVOSLIDER CSS SETTINGS -->
