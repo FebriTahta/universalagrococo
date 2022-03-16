@@ -585,81 +585,23 @@
             </div>
 
             <!-- FOOTER 2 -->
-            <footer class="page-section pt-80 pb-50">
+            <footer class="page-section text-center pt-100-b-80-cont">
                 <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-3 col-sm-3 widget">
-                            <div class="logo-footer-cont">
-                                <a href="#">
-                                    <img class="logo-footer" src="{{ asset('assets/images/logo-footer.png') }}"
-                                        alt="logo">
-                                </a>
-                            </div>
-                            <div class="footer-2-text-cont">
-                                <address>
-                                    Jl. Sidosermo I No.8a<br>
-                                    Indonesia, Surabaya
-                                </address>
-                            </div>
-                            <div class="footer-2-text-cont">
-                                1-800-312-2121
-                            </div>
-                            <div class="footer-2-text-cont">
-                                <a class="a-text" href="mailto:info@haswell.com">uac@gmail.com</a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-3 widget">
-                            <h4>NAVIGATE</h4>
-                            <ul class="links-list bold a-text-cont">
-                                <li><a href="/">HOME</a></li>
-                                <li><a href="#">PRODUCT</a></li>
-                                <li><a href="{{ $data_contact->whatsapp }}">CONTACT</a></li>
-                                <li><a href="/">ABOUT US</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-md-3 col-sm-3 widget">
-                            <h4>ABOUT US</h4>
-                            <ul class="links-list a-text-cont">
-                                <li><a href="{{ $data_contact->whatsapp }}">CONTACT</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-md-3 col-sm-3 widget">
-                            <h4>RECENT POSTS</h4>
-                            <div id="post-list-footer">
-                                <ul class="nav navbar-nav" id="nav-sidebar" style="padding: 5%">
-                                    @foreach ($data_product as $item)
-                                        <div class="post-prev-title">
-                                            <h3><a class="a-text" style="text-transform: uppercase"
-                                                    href="#{{ $item->slug }}">{{ $item->name }}</a></h3>
-                                        </div>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
+                    <?php $link = App\Models\Linkbutton::all();
+                          $profile = App\Models\Profile::find(1);
+                    ?>
+                    <!-- Social Links -->
+                    <div class="footer-soc-a">
+                        @foreach ($link as $item)
+                            <a href="{{$item->link}}" class="text-dark" title="{{$item->name}}" target="_blank"><i class="fa fa-{{$item->name}}"></i> {{$item->name}}</a>
+                        @endforeach
                     </div>
-
-                    <div class="footer-2-copy-cont clearfix">
-                        <!-- Social Links -->
-                        {{-- <div class="footer-2-soc-a right">
-                            <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                            <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="#" title="Behance" target="_blank"><i class="fa fa-behance"></i></a>
-                            <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
-                            <a href="#" title="Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a>
-                        </div> --}}
-
-                        <!-- Copyright -->
-                        <div class="left">
-                            <a class="footer-2-copy" href="#" target="_blank">&copy; Universal Agro Coco 2021</a>
-                        </div>
-
-
+            
+                    <!-- Copyright -->
+                    <div class="footer-copy">
+                        <a href="/" target="_blank">{{$profile->email}}</a>
                     </div>
-
+            
                 </div>
             </footer>
 
