@@ -298,7 +298,7 @@
                             </div>
                             <div class="cis-text">
                                 <h3><span class="bold">EMAIL</span></h3>
-                                <p><a href="#">{{ $data_contact->email }}</a></p>
+                                <p><a href="mailto:{{$data_contact->email}}">{{ $data_contact->email }}</a></p>
                             </div>
                         </div>
                     </div>
