@@ -4,7 +4,7 @@
         <!-- Social Links -->
         <div class="footer-soc-a">
             @foreach ($social as $item)
-                <a href="{{$item->link}}" title="{{$item->name}}" target="_blank"><i class="fa fa-{{$item->subjudul}}"></i> {{$item->name}}</a>
+                <a href="{{$item->link}}" title="{{$item->name}}" target="_blank"> {{$item->name}}</a>
             @endforeach
         </div>
 
