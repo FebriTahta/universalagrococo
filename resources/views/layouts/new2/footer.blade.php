@@ -4,8 +4,8 @@
               $profile = App\Models\Profile::find(1);
         ?>
         <!-- Social Links -->
-        <div class="footer-copy" style="text-decoration-color: black">
-            @foreach ($social as $item)
+        <div class="footer-soc-a">
+            @foreach ($link as $item)
                 <a href="{{$item->link}}" class="text-dark" title="{{$item->name}}" target="_blank"> {{$item->name}}</a>
             @endforeach
         </div>
