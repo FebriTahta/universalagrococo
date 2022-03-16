@@ -10,21 +10,25 @@
 
 <html lang="en">
  	<head>
+		<?php
+        $about = App\Models\About::find(1);
+        $profile = App\Models\Profile::find(1);
+        ?>
 		<title>UAC</title>
 		<meta charset="utf-8">
 		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 		<meta name="robots" content="index, follow" > 
-		<meta name="keywords" content="HTML5 Template" > 
-		<meta name="description" content="Haswell - Responsive HTML5 Template" > 
-		<meta name="author" content="ABCgomel">
+		<meta name="keywords" content="Universal Agro Coco" > 
+		<meta name="description" content="{{$about->deskripsi}}" > 
+		<meta name="author" content="U A C">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="csrf-token" content="{{ csrf_token() }}" />
 		<!-- FAVICONS -->
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon/favicon.png')}}">
-    <link rel="apple-touch-icon" href="{{asset('assets/images/favicon/apple-touch-icon.png')}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('assets/images/favicon/apple-touch-icon-72x72.png')}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('assets/images/favicon/apple-touch-icon-114x114.png')}}">
+    <link rel="shortcut icon" href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
+    <link rel="apple-touch-icon" href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
 		
 <!-- CSS -->
     <!-- REVOSLIDER CSS SETTINGS -->
