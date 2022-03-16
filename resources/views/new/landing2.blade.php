@@ -3,7 +3,7 @@
     <div id="index-link" class="relative">
 
         <div class="rev_slider_wrapper fullscreen-container" id="rev_slider_280_1_wrapper"
-            style="background-color:#fff;padding:0px;">
+            style="background-color:#fff;padding:0px;"> 
             <!-- START REVOLUTION SLIDER 5.1.4 fullscreen mode -->
             <div class="rev_slider fullscreenbanner" data-version="5.1.4" id="rev_slider_280_1" style="display:none;">
                 <ul>
@@ -85,11 +85,7 @@
                                     <div class="icon icon-basic-helm"></div>
                                 </div>
                                 <h3>ABOUT US</h3>
-                                <p>We (UAC Indonesia) are an Indonesian manufacturing company engaged in plantations and
-                                    supplying raw materials from fresh coconut to processed coconut products that have the
-                                    highest value and benefits for our consumers. Our company is very expert in coconut
-                                    derivative industry, we have the best experience, make our clients satisfied with every
-                                    cooperation as a project.</p>
+                                <p></p>
                             </div>
                         </div>
 
