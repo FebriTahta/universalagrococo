@@ -2,4 +2,4 @@
 <main>
     @yield('content')
 </main>
-@include('layouts.footer')
+@include('layouts.new2.footer')
