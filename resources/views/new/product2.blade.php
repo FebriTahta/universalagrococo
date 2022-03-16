@@ -599,7 +599,7 @@
             
                     <!-- Copyright -->
                     <div class="footer-copy">
-                        <a href="/" target="_blank">{{$profile->email}}</a>
+                        <a href="mailto:{{$profile->email}}" target="_blank">{{$profile->email}}</a>
                     </div>
             
                 </div>
