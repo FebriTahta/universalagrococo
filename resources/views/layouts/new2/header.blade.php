@@ -26,11 +26,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- FAVICONS -->
-    <link rel="shortcut icon" href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
-    <link rel="apple-touch-icon" href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
+    <link rel="shortcut icon" href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
+    <link rel="apple-touch-icon" href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
     <link rel="apple-touch-icon" sizes="114x114"
-        href="{{ asset('be_contact_logo/' . $profile->img_light) }}">
+        href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
 
     <!-- CSS -->
     <!-- REVOLUTION STYLE SHEETS -->

@@ -88,11 +88,11 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label>Image Dark</label>
+                                    <label>Image Dark (max 250kb)</label>
                                     <input onchange="showPreview(event);" type="file" name="img_dark" class="form-control" aria-label="file example" accept="image/*" >
                                     <div class="invalid-feedback">harus diisi</div><br>
                                     <div class="preview text-right">
-                                        <img src="{{asset('be_contact_logo/'.$data->img_dark)}}" width="150" height="50" id="preview" class="mt-3"><br>
+                                        <img src="{{asset('be_contact_logo/'.$data->img_dark)}}" width="150" height="150" id="preview" class="mt-3"><br>
                                         <small>Sesuaikan logo</small>
                                     </div>
                                 </div>
