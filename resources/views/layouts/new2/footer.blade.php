@@ -1,11 +1,11 @@
 <footer class="page-section text-center pt-100-b-80-cont">
     <div class="container">
-
+        <?php $link = App\Models\Linkbutton::all();?>
         <!-- Social Links -->
         <div class="footer-soc-a">
-            {{-- @foreach ($social as $item)
-        <a href="{{$item->judul}}" title="Facebook" target="_blank"><i class="fa fa-{{$item->subjudul}}"></i></a>
-        @endforeach --}}
+            @foreach ($social as $item)
+                <a href="{{$item->link}}" title="{{$item->name}}" target="_blank"><i class="fa fa-{{$item->subjudul}}"></i> {{$item->name}}</a>
+            @endforeach
         </div>
 
         <!-- Copyright -->

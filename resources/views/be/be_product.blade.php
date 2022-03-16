@@ -137,7 +137,7 @@
             </form>
         </div>
     </div>
-  </div>
+</div>
 
   <div id="modaldel" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered">

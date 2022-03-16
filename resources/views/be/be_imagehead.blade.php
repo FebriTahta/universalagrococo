@@ -1,369 +1,339 @@
 @extends('layouts.be_master')
 
 @section('head')
-{{-- <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+    {{-- <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet"> --}}
 @endsection
 
 @section('content')
-<div class="page-wrapper">
-    <div class="page-content">
-        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-            <div class="breadcrumb-title pe-3">Section</div>
-            <div class="ps-3">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-0 p-0">
-                        <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">Image Header</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-        <div class="text-right" style="margin-bottom: 10px">
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary">...</button>
-                <button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">	<span class="visually-hidden">Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end">	<a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleVerticallycenteredModal">Create</a>
-                    <div class="dropdown-divider"></div>
+    <div class="page-wrapper">
+        <div class="page-content">
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                <div class="breadcrumb-title pe-3">Section</div>
+                <div class="ps-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0 p-0">
+                            <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Image Header</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div id="errList" class="text-uppercase">
+            {{-- <div class="text-right" style="margin-bottom: 10px">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary">...</button>
+                    <button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown"> <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end"> <a class="dropdown-item"
+                            href="javascript:;" data-bs-toggle="modal"
+                            data-bs-target="#exampleVerticallycenteredModal">Create</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </div>
+            </div> --}}
+            <div class="card">
+                <div id="errList" class="text-uppercase">
 
+                </div>
             </div>
-            {{-- @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif --}}
 
-           <div class="row">
-                <div class="card-body col-xl-6">
-                    <div class="card-body">
-                        <h5>FOOTER SOCMED</h5>
-                    </div>
-                    <div class="modal-body">
-                        <form id="formsubmit1" class="was-validated" enctype="multipart/form-data" method="post">@csrf
-                            <input type="hidden" name="id" value="{{$header_about->id}}">
-                            <div class="p-4 border rounded">
-                                <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">LINK FACEBOOK</label>
-                                    <input value="{{$header_about->judul}}" type="text" name="judul" class="form-control" placeholder="-" required>
-                                    <div class="invalid-feedback">harus diisi</div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">NAME</label>
-                                    <input value="{{$header_about->subjudul}}" type="text" name="subjudul" class="form-control" placeholder="-" required>
-                                    <div class="invalid-feedback">harus diisi</div>
-                                </div>
-                                
-                                {{-- <div class="mb-3">
-                                    <input onchange="showPreview1(event);" type="file" name="bg" class="form-control" aria-label="file example" accept="image/*">
-                                    <div class="invalid-feedback">harus diisi</div><br>
-                                    <div class="preview text-right">
-                                        <img src="{{asset('be_header/'.$header_about->bg)}}" width="350" height="200" id="preview" class="img-thumbnail"><br>
-                                        <small>1400px x 800px</small>
-                                    </div>
-                                </div> --}}
-                                <input type="submit" id="btnadd1" class="btn btn-primary" value="SUBMIT"><br>
+            <div class="row">
+                <div class="card col-md-4" style="padding: 1%">
+                    <div class="col-md-12">
+                        <form method="POST" id="formadd">@csrf
+                            <div class="form-group">
+                                <label>Nama Social Media (Facebook / Instagram / Dsb)</label>
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Link (diawali https://)</label>
+                                <input type="text" class="form-control" name="link" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" id="btnadd" class="btn btn-primary btn-sm" value="submit">
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="card-body col-xl-6">
-                    <div class="card-body">
-                        <h5>FOOTER SOCMED</h5>
-                    </div>
-                    <div class="modal-body">
-                        <form id="formsubmit2" class="was-validated" enctype="multipart/form-data" method="post">@csrf
-                            <input type="hidden" name="id" value="{{$header_product->id}}">
-                            <div class="p-4 border rounded">
-                                <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">LINK TWITTER</label>
-                                    <input value="{{$header_product->judul}}" type="text" name="judul" class="form-control" placeholder="-" required>
-                                    <div class="invalid-feedback">harus diisi</div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">NAME</label>
-                                    <input value="{{$header_product->subjudul}}" type="text" name="subjudul" class="form-control" placeholder="-" required>
-                                    <div class="invalid-feedback">harus diisi</div>
-                                </div>
-                                
-                                {{-- <div class="mb-3">
-                                    <input onchange="showPreview2(event);" type="file" name="bg" class="form-control" aria-label="file example" accept="image/*">
-                                    <div class="invalid-feedback">harus diisi</div><br>
-                                    <div class="preview text-right">
-                                        <img src="{{asset('be_header/'.$header_product->bg)}}" width="350" height="200" id="preview2" class="img-thumbnail"><br>
-                                        <small>1400px x 800px</small>
-                                    </div>
-                                </div> --}}
-                                <input type="submit" id="btnadd2" class="btn btn-primary" value="SUBMIT"><br>
-                            </div>
-                        </form>
+
+                <div class="card col-md-8" style="padding: 1%">
+                    <div class="table-responsive">
+                        <table id="example" class="table table-bordered dt-responsive nowrap"
+                            style="border-collapse: collapse; border-spacing: 0; width: 100%; ">
+                            <thead>
+                                <tr>
+                                    <th>Social Media</th>
+                                    <th>Link</th>
+                                    <th>Option</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Social Media</th>
+                                    <th>Link</th>
+                                    <th>Option</th>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
-                <div class="card-body col-xl-6">
-                    <div class="card-body">
-                        <h5>FOOTER SOCMED</h5>
-                    </div>
-                    <div class="modal-body">
-                        <form id="formsubmit3" class="was-validated" enctype="multipart/form-data" method="post">@csrf
-                            <input type="hidden" name="id" value="{{$header_contact->id}}">
-                            <div class="p-4 border rounded">
-                                <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">LINK INSTAGRAM</label>
-                                    <input value="{{$header_contact->judul}}" type="text" name="judul" class="form-control" placeholder="-" required>
-                                    <div class="invalid-feedback">harus diisi</div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">NAME</label>
-                                    <input value="{{$header_contact->subjudul}}" type="text" name="subjudul" class="form-control" placeholder="-" required>
-                                    <div class="invalid-feedback">harus diisi</div>
-                                </div>
-                                
-                                {{-- <div class="mb-3">
-                                    <input onchange="showPreview3(event);" type="file" name="bg" class="form-control" aria-label="file example" accept="image/*">
-                                    <div class="invalid-feedback">harus diisi</div><br>
-                                    <div class="preview text-right">
-                                        <img src="{{asset('be_header/'.$header_contact->bg)}}" width="350" height="200" id="preview3" class="img-thumbnail"><br>
-                                        <small>1400px x 800px</small>
-                                    </div>
-                                </div> --}}
-                                <input type="submit" id="btnadd3" class="btn btn-primary" value="SUBMIT"><br>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="card-body col-xl-6">
-                    <div class="card-body">
-                        <h5>FOOTER SOCMED</h5>
-                    </div>
-                    <div class="modal-body">
-                        <form id="formsubmit4" class="was-validated" enctype="multipart/form-data" method="post">@csrf
-                            <input type="hidden" name="id" value="{{$header_blog->id}}">
-                            <div class="p-4 border rounded">
-                                <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">LINK LINKEDIN</label>
-                                    <input value="{{$header_blog->judul}}" type="text" name="judul" class="form-control" placeholder="-" required>
-                                    <div class="invalid-feedback">harus diisi</div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="validationServer01" class="form-label">NAME</label>
-                                    <input value="{{$header_blog->subjudul}}" type="text" name="subjudul" class="form-control" placeholder="-" required>
-                                    <div class="invalid-feedback">harus diisi</div>
-                                </div>
-                                
-                                {{-- <div class="mb-3">
-                                    <input onchange="showPreview4(event);" type="file" name="bg" class="form-control" aria-label="file example" accept="image/*">
-                                    <div class="invalid-feedback">harus diisi</div><br>
-                                    <div class="preview text-right">
-                                        <img src="{{asset('be_header/'.$header_blog->bg)}}" width="350" height="200" id="preview4" class="img-thumbnail"><br>
-                                        <small>1400px x 800px</small>
-                                    </div>
-                                </div> --}}
-                                <input type="submit" id="btnadd4" class="btn btn-primary" value="SUBMIT"><br>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-           </div>
+            </div>
         </div>
     </div>
-</div>
 
+    <div id="modalupdate" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">UPDATE SOCIAL MEDIA</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="formupdate" class="was-validated" enctype="multipart/form-data" method="post">@csrf
+                    <div class="modal-body">
+                        <input type="hidden" name="id" id="id">
+                        <div class="form-group">
+                            <label for="">Social Media Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Social Media Link</label>
+                            <input type="text" class="form-control" id="link" name="link" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" id="btnupdate" class="btn btn-primary" value="update">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
+    <div id="modalhapus" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">HAPUS SOCIAL MEDIA</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="formhapus" class="was-validated" enctype="multipart/form-data" method="post">@csrf
+                    <div class="modal-body">
+                        <input type="hidden" name="id" id="id">
+                        <div class="form-group text-center">
+                            <p>YAKIN AKAN MENGHAPUS SOCIAL MEDIA INI ?</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" id="btnhapus" class="btn btn-danger" value="hapus">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('script')
-
-<script type="text/javascript">
-    function showPreview1(event){
-        if(event.target.files.length > 0){
-            var src = URL.createObjectURL(event.target.files[0]);
-            var preview = document.getElementById("preview");
-            preview.src = src;
-        }
-    }
-    function showPreview2(event){
-        if(event.target.files.length > 0){
-            var src = URL.createObjectURL(event.target.files[0]);
-            var preview = document.getElementById("preview2");
-            preview.src = src;
-        }
-    }
-    function showPreview3(event){
-        if(event.target.files.length > 0){
-            var src = URL.createObjectURL(event.target.files[0]);
-            var preview = document.getElementById("preview3");
-            preview.src = src;
-        }
-    }
-    function showPreview4(event){
-        if(event.target.files.length > 0){
-            var src = URL.createObjectURL(event.target.files[0]);
-            var preview = document.getElementById("preview4");
-            preview.src = src;
-        }
-    }
-
-    // store data
-    $('#formsubmit1').submit(function(e) {
-                e.preventDefault();
-                var formData = new FormData(this);
-                $.ajax({
-                type:'POST',
-                url: "{{ route('be_imagehead.store')}}",
+    <script type="text/javascript">
+        $('#modalupdate').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget)
+            var id = button.data('id')
+            var name = button.data('name')
+            var link = button.data('link')
+            var modal = $(this)
+            modal.find('.modal-body #id').val(id);
+            modal.find('.modal-body #name').val(name);
+            modal.find('.modal-body #link').val(link);            
+        })
+        $('#modalhapus').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget)
+            var id = button.data('id')
+            
+            var modal = $(this)
+            modal.find('.modal-body #id').val(id);
+                   
+        })
+        // store data
+        $('#formupdate').submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'POST',
+                url: "{{ route('be_social_link_post') }}",
                 data: formData,
-                cache:false,
+                cache: false,
                 contentType: false,
                 processData: false,
-                beforeSend:function(){
-                    $('#btnadd1').attr('disabled','disabled');
-                    $('#btnadd1').val('Process');
+                beforeSend: function() {
+                    $('#btnupdate').attr('disabled', 'disabled');
+                    $('#btnupdate').val('Process');
                 },
-                success: function(response){
-                    if(response.status == 200)
-                    {
-                        $('#btnadd1').val('SUBMIT');
-                        $('#btnadd1').attr('disabled',false);
+                success: function(response) {
+                    if (response.status == 200) {
+                        $('#btnupdate').val('update');
+                        $('#btnupdate').attr('disabled', false);
+                        // $("#formupdate")[0].reset();
+                        var oTable = $('#example').dataTable();
+                        oTable.fnDraw(false);
+                        // $('#modalupdate').hide('hide');
                         toastr.success(response.message);
-                    }else{
-                        $('#btnadd1').val('SUBMIT');
-                        $('#btnadd1').attr('disabled',false);
+                    } else {
+                        $('#btnupdate').val('subimt');
+                        $('#btnupdate').attr('disabled', false);
                         toastr.error(response.message);
                         $('#errList').html("");
                         $('#errList').addClass('alert alert-danger');
                         $.each(response.errors, function(key, err_values) {
-                            $('#errList').append('<div>'+err_values+'</div>');
+                            $('#errList').append('<div>' + err_values + '</div>');
                         });
                     }
                 },
-                error: function(data)
-                {
+                error: function(data) {
                     console.log(data);
-                    }
-                });
+                }
             });
+        });
 
-            $('#formsubmit2').submit(function(e) {
-                e.preventDefault();
-                var formData = new FormData(this);
-                $.ajax({
-                type:'POST',
-                url: "{{ route('be_imagehead.store')}}",
+        $('#formhapus').submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'POST',
+                url: "{{ route('be_social_link_dell') }}",
                 data: formData,
-                cache:false,
+                cache: false,
                 contentType: false,
                 processData: false,
-                beforeSend:function(){
-                    $('#btnadd2').attr('disabled','disabled');
-                    $('#btnadd2').val('Process');
+                beforeSend: function() {
+                    $('#btnhapus').attr('disabled', 'disabled');
+                    $('#btnhapus').val('Process');
                 },
-                success: function(response){
-                    if(response.status == 200)
-                    {
-                        $('#btnadd2').val('SUBMIT');
-                        $('#btnadd2').attr('disabled',false);
-                        toastr.success(response.message);
-                    }else{
-                        $('#btnadd2').val('SUBMIT');
-                        $('#btnadd2').attr('disabled',false);
+                success: function(response) {
+                    if (response.status == 200) {
+                        $('#btnhapus').val('hapus');
+                        $('#btnhapus').attr('disabled', false);
+                        $("#formhapus")[0].reset();
+                        var oTable = $('#example').dataTable();
+                        oTable.fnDraw(false);
+                        // $('#modalupdate').hide('hide');
+                        toastr.warning(response.message);
+                    } else {
+                        $('#btnhapus').val('subimt');
+                        $('#btnhapus').attr('disabled', false);
                         toastr.error(response.message);
                         $('#errList').html("");
                         $('#errList').addClass('alert alert-danger');
                         $.each(response.errors, function(key, err_values) {
-                            $('#errList').append('<div>'+err_values+'</div>');
+                            $('#errList').append('<div>' + err_values + '</div>');
                         });
                     }
                 },
-                error: function(data)
-                {
+                error: function(data) {
                     console.log(data);
-                    }
-                });
+                }
             });
+        });
 
-            $('#formsubmit3').submit(function(e) {
-                e.preventDefault();
-                var formData = new FormData(this);
-                $.ajax({
-                type:'POST',
-                url: "{{ route('be_imagehead.store')}}",
+        $('#formsubmit3').submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'POST',
+                url: "{{ route('be_imagehead.store') }}",
                 data: formData,
-                cache:false,
+                cache: false,
                 contentType: false,
                 processData: false,
-                beforeSend:function(){
-                    $('#btnadd3').attr('disabled','disabled');
+                beforeSend: function() {
+                    $('#btnadd3').attr('disabled', 'disabled');
                     $('#btnadd3').val('Process');
                 },
-                success: function(response){
-                    if(response.status == 200)
-                    {
+                success: function(response) {
+                    if (response.status == 200) {
                         $('#btnadd3').val('SUBMIT');
-                        $('#btnadd3').attr('disabled',false);
+                        $('#btnadd3').attr('disabled', false);
                         toastr.success(response.message);
-                    }else{
+                    } else {
                         $('#btnadd3').val('SUBMIT');
-                        $('#btnadd3').attr('disabled',false);
+                        $('#btnadd3').attr('disabled', false);
                         toastr.error(response.message);
                         $('#errList').html("");
                         $('#errList').addClass('alert alert-danger');
                         $.each(response.errors, function(key, err_values) {
-                            $('#errList').append('<div>'+err_values+'</div>');
+                            $('#errList').append('<div>' + err_values + '</div>');
                         });
                     }
                 },
-                error: function(data)
-                {
+                error: function(data) {
                     console.log(data);
-                    }
-                });
+                }
             });
+        });
 
-            $('#formsubmit4').submit(function(e) {
-                e.preventDefault();
-                var formData = new FormData(this);
-                $.ajax({
-                type:'POST',
-                url: "{{ route('be_imagehead.store')}}",
+        $('#formadd').submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'POST',
+                url: "{{ route('be_social_link_post') }}",
                 data: formData,
-                cache:false,
+                cache: false,
                 contentType: false,
                 processData: false,
-                beforeSend:function(){
-                    $('#btnadd4').attr('disabled','disabled');
-                    $('#btnadd4').val('Process');
+                beforeSend: function() {
+                    $('#btnadd').attr('disabled', 'disabled');
+                    $('#btnadd').val('Process');
                 },
-                success: function(response){
-                    if(response.status == 200)
-                    {
-                        $('#btnadd4').val('SUBMIT');
-                        $('#btnadd4').attr('disabled',false);
+                success: function(response) {
+                    if (response.status == 200) {
+                        $('#btnadd').val('submit');
+                        $('#btnadd').attr('disabled', false);
+                        $("#formadd")[0].reset();
+                        var oTable = $('#example').dataTable();
+                        oTable.fnDraw(false);
                         toastr.success(response.message);
-                    }else{
-                        $('#btnadd4').val('SUBMIT');
-                        $('#btnadd4').attr('disabled',false);
+                    } else {
+                        $('#btnadd').val('subimt');
+                        $('#btnadd').attr('disabled', false);
                         toastr.error(response.message);
                         $('#errList').html("");
                         $('#errList').addClass('alert alert-danger');
                         $.each(response.errors, function(key, err_values) {
-                            $('#errList').append('<div>'+err_values+'</div>');
+                            $('#errList').append('<div>' + err_values + '</div>');
                         });
                     }
                 },
-                error: function(data)
-                {
+                error: function(data) {
                     console.log(data);
-                    }
-                });
+                }
             });
-</script>
+        });
+
+        $(function() {
+
+            var table = $('#example').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('be_social_link') }}",
+                columns: [{
+                        data: 'name',
+                        name: 'name'
+                    },
+                    {
+                        data: 'link',
+                        name: 'link'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: true,
+                        searchable: true
+                    },
+                ]
+            });
+        });
+    </script>
 @endsection

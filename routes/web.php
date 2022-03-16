@@ -106,6 +106,10 @@ Route::get('/be-account',[AccountController::class,'be_account_page'])->name('be
 Route::get('/be-account-data',[AccountController::class,'be_account_data'])->name('be_account.data');
 Route::post('/be-account-store',[AccountController::class,'be_account_store'])->name('be_account.store');
 Route::post('/be-account-dell',[AccountController::class,'be_account_dell'])->name('be_account.dell');
+
+Route::get('/be-social-link',[ImageheaderController::class,'social_link'])->name('be_social_link');
+Route::post('/be-social-link-post',[ImageheaderController::class,'social_link_post'])->name('be_social_link_post');
+Route::post('/be-social-link-dell',[ImageheaderController::class,'social_link_dell'])->name('be_social_link_dell');
 });
 
 
