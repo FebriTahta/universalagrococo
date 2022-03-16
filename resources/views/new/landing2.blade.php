@@ -85,7 +85,7 @@
                                     <div class="icon icon-basic-helm"></div>
                                 </div>
                                 <h3>ABOUT US</h3>
-                                <p></p>
+                                <p>{!!$data_about->deskripsi!!}</p>
                             </div>
                         </div>
 
