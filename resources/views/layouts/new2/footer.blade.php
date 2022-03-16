@@ -1,8 +1,10 @@
 <footer class="page-section text-center pt-100-b-80-cont">
     <div class="container">
-        <?php $link = App\Models\Linkbutton::all();?>
+        <?php $link = App\Models\Linkbutton::all();
+              $profile = App\Models\Profile::find(1);
+        ?>
         <!-- Social Links -->
-        <div class="footer-soc-a" style="text-decoration-color: black">
+        <div class="footer-copy" style="text-decoration-color: black">
             @foreach ($social as $item)
                 <a href="{{$item->link}}" class="text-dark" title="{{$item->name}}" target="_blank"> {{$item->name}}</a>
             @endforeach
@@ -10,7 +12,7 @@
 
         <!-- Copyright -->
         <div class="footer-copy">
-            <a href="http://themeforest.net/user/abcgomel/portfolio" target="_blank">&copy; HASWELL 2020</a>
+            <a href="/" target="_blank">{{$profile->email}}</a>
         </div>
 
     </div>
