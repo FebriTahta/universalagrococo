@@ -2,9 +2,9 @@
     <div class="container">
         <?php $link = App\Models\Linkbutton::all();?>
         <!-- Social Links -->
-        <div class="footer-soc-a">
+        <div class="footer-soc-a" style="text-decoration-color: black">
             @foreach ($social as $item)
-                <a href="{{$item->link}}" title="{{$item->name}}" target="_blank"> {{$item->name}}</a>
+                <a href="{{$item->link}}" class="text-dark" title="{{$item->name}}" target="_blank"> {{$item->name}}</a>
             @endforeach
         </div>
 
