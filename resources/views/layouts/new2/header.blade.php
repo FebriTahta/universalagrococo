@@ -31,6 +31,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
     <link rel="apple-touch-icon" sizes="114x114"
         href="{{ asset('be_contact_logo/' . $profile->img_dark) }}">
+        <meta property="og:image" itemprop="image" content="https://uac-id.com/be_contact_logo/{{$profile->img_dark}}">
 
     <!-- CSS -->
     <!-- REVOLUTION STYLE SHEETS -->
